@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../scss/style.css" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../scss/alertdesign/toast.css" />
+    <script src="../js/includehtml.js" defer></script>
+    <script src="../js/script.js" defer></script>
+    <script src="../js/modalscript.js" defer></script>
+    <!-- <script src="../js/sweetalert2.min.js" defer></script> -->
+    <script src="../js/toastdesign.js" defer></script>
+    <script src="backendscript.js" defer></script>
+    <script src="profileacc.js" defer></script>
+    <script src="enrollment.js" defer></script>
+    <script src="messagenotif.js" defer></script>
+    <script src="assesment.js" defer></script>
+    <script src="enlistment.js" defer></script>
+    <script src="accountbalance.js" defer></script>
+    <!-- realtime connection -->
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="realtimeconn.js" defer></script>
+    <!-- /////////////////// -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      defer
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      defer
+    ></script>
+  </head>
+  <body class="bg-dash">
+    <div import-html="dashboard.html"></div>
+    <div
+      import-html="dashcontent.html"
+      class="homepage"
+      id="pagecontainer"
+    ></div>
+    <div import-html="myaccount.html" class="myaccount"></div>
+    <div import-html="aboutus.html" class="aboutus"></div>
+    <div import-html="contactus.html" class="contactus"></div>
+  </body>
+</html>

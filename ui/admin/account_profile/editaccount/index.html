@@ -1,0 +1,103 @@
+<style>
+  .editaccountmodal {
+    width: 70%;
+  }
+  .bodyeditaccount {
+    height: 70%;
+  }
+  .bodyeditaccount div > img {
+    border-radius: 100%;
+    width: 180px;
+    height: 180px;
+  }
+  .editaccinputdefaultdes1 {
+    width: 80%;
+  }
+  input[type="file"] {
+    display: none;
+  }
+  .hoverimgholder {
+    position: absolute;
+    opacity: 0;
+  }
+  .hoverimgholder:hover {
+    opacity: 1;
+  }
+</style>
+<div class="modal-content1 editaccountmodal">
+  <div class="modal-header1">
+    <span class="close1" onclick="closefirstmodal()">&times;</span>
+    <h3>Modal Title</h3>
+  </div>
+  <div class="modal-body1">
+    <div class="padder flexbox bodyeditaccount">
+      <div class="">
+        <input
+          type="file"
+          id="picture"
+          name="picture"
+          accept="image/x-png,image/gif,image/jpeg"
+          onchange="loadFile(event)"
+        />
+        <img
+          onclick="uploadprofilepic()"
+          class="hoverimgholder"
+          src="../../img/placeholder.jpg"
+        />
+        <img id="myimage" src="../../img/defaultimg.png" />
+      </div>
+      <div class="fullwidth">
+        <div class="fullwidth flexbox">
+          <div class="padder fullwidth">
+            <label>Username</label>
+            <input id="username2" type="text" class="inputtextdes1" />
+          </div>
+          <div class="padder fullwidth">
+            <label>Password</label>
+            <input id="password2" type="text" class="inputtextdes1" />
+          </div>
+        </div>
+        <div class="fullwidth flexbox">
+          <div class="padder fullwidth">
+            <label>Lastname</label>
+            <input id="lastname2" type="text" class="inputtextdes1" />
+          </div>
+          <div class="padder fullwidth">
+            <label>Firstname</label>
+            <input id="firstname2" type="text" class="inputtextdes1" />
+          </div>
+        </div>
+        <div class="fullwidth flexbox">
+          <div class="padder fullwidth">
+            <label>Birthdate</label>
+            <input id="birthdate2" type="text" class="inputtextdes1" />
+          </div>
+          <div class="padder fullwidth">
+            <label>Phone</label>
+            <input id="phonenumber2" type="text" class="inputtextdes1" />
+          </div>
+        </div>
+        <div class="fullwidth flexbox">
+          <div class="padder fullwidth">
+            <label>Email</label>
+            <input id="emailaddress2" type="text" class="inputtextdes1" />
+          </div>
+          <div class="padder fullwidth">
+            <label>Address</label>
+            <input id="address2" type="text" class="inputtextdes1" />
+          </div>
+        </div>
+        <div class="fullwidth flexbox">
+          <div class="padder fullwidth">
+            <button
+              onclick="accountprofilefunct('editprofilefunc')"
+              class="btndes1"
+            >
+              SAVE
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,236 @@
+<style>
+  /* ////////// first grid //////// */
+  .maingridpage1 {
+    display: grid;
+    background-color: transparent;
+    grid-template-columns: 30% auto;
+    grid-template-rows: 50% auto;
+    gap: 10px;
+    padding: 10px;
+  }
+  .gridcontent1 {
+    background-color: transparent;
+  }
+
+  .userprofilefullnamedes {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    background-color: var(--white);
+    border-radius: 10px;
+  }
+
+  .userinfodes {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: var(--white);
+    border-radius: 10px;
+  }
+
+  .useractivities {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: var(--white);
+    border-radius: 10px;
+  }
+  .stripedaccountprofile {
+    margin-top: 30px;
+    background-color: var(--violet);
+    height: 15%;
+  }
+  .whitestripedaccountprofile {
+    margin-left: 20px;
+    background-color: var(--white);
+    width: 10%;
+  }
+  .accountprofilenamelbl {
+    text-align: center;
+    margin-right: 40px;
+    color: var(--white);
+  }
+  .accountprofilepicturecontdes {
+    text-align: center;
+    padding-top: 30px;
+  }
+  .accountprofilepicturecontdes h3 {
+    margin-top: 30px;
+    color: var(--black);
+  }
+  .accountprofilepicturedes {
+    border: 2px solid var(--violet);
+    border-radius: 100%;
+    width: 190px;
+    height: 190px;
+  }
+  /* /////////////////////////////// */
+  /* ////////// second grid //////// */
+  .maingridpage2 {
+    display: grid;
+    background-color: transparent;
+    grid-template-columns: 5% 20% auto;
+    gap: 0px;
+    padding: 0px;
+  }
+  .gridcontent2 {
+    background-color: transparent;
+  }
+
+  .spacing {
+    grid-column: 1;
+    background-color: transparent;
+    border-radius: 10px;
+  }
+
+  .stripelabel {
+    grid-column: 2;
+    background-color: var(--lightBlue);
+    text-align: center;
+  }
+
+  .whitestripelabel {
+    height: 20px;
+    background-color: var(--white);
+  }
+  .actualaccountcontent {
+    grid-column: 3;
+    background-color: transparent;
+    position: relative;
+  }
+  .userinfotitlepadding {
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: var(--black);
+  }
+
+  .actualaccountcontent form div {
+    padding: 10px;
+  }
+  .actualaccountcontent form div input {
+    margin-right: 10px;
+    width: 100px;
+    border: none;
+    outline: none;
+    color: var(--black);
+  }
+  .accnavigationbtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 50px;
+  }
+  .accnavigationbtn img {
+    width: 23px;
+    height: auto;
+    cursor: pointer;
+  }
+  .accnavigationbtn .gobackbtn {
+    margin-right: 15px;
+  }
+  .activitydatades {
+    padding: 10px;
+  }
+  /* /////////////////////////////// */
+  .padder {
+    padding: 10px;
+  }
+</style>
+<div import-html="modals.html"></div>
+<div class="fullwidth fullheight maingridpage1">
+  <div class="gridcontent1 userprofilefullnamedes">
+    <div class="stripedaccountprofile flexcontent">
+      <div class="fullheight whitestripedaccountprofile"></div>
+      <h3 class="accountprofilenamelbl fullwidth">Full Name</h3>
+    </div>
+    <div class="accountprofilepicturecontdes">
+      <img
+        src="../../img/defaultimg.png"
+        class="accountprofilepicturedes"
+        id="profilepicid"
+      />
+      <h3>Admin</h3>
+    </div>
+  </div>
+  <div class="gridcontent1 userinfodes">
+    <div class="fullwidth fullheight maingridpage2">
+      <div class="gridcontent2 spacing"></div>
+      <div class="gridcontent2 fullheight stripelabel">
+        <h3 class="userinfotitlepadding">User Info</h3>
+        <div class="fullwidth whitestripelabel"></div>
+      </div>
+      <div class="gridcontent2 fullwidth actualaccountcontent flexbox">
+        <form onsubmit="event.preventDefault()">
+          <div class="fullwidth flexbox">
+            <input
+              type="text"
+              id="usernametxt"
+              placeholder="Username"
+              readonly
+            />
+            <input
+              type="text"
+              id="passwordtxt"
+              placeholder="Password"
+              readonly
+            />
+          </div>
+
+          <div class="fullwidth flexbox">
+            <input
+              type="text"
+              id="lastnametxt"
+              placeholder="Lastname"
+              readonly
+            />
+            <input
+              type="text"
+              id="firstnametxt"
+              placeholder="Firstname"
+              readonly
+            />
+          </div>
+          <div class="fullwidth flexbox">
+            <input
+              type="text"
+              id="birthdatetxt"
+              placeholder="Birthdate"
+              readonly
+            />
+            <input type="text" id="phonetxt" placeholder="Phone" readonly />
+          </div>
+          <div class="fullwidth flexbox">
+            <input type="text" id="emailtxt" placeholder="Email" readonly />
+            <input type="text" id="addresstxt" placeholder="Address" readonly />
+          </div>
+        </form>
+        <div class="accnavigationbtn flexcontent">
+          <img
+            onclick="gotohome()"
+            class="gobackbtn"
+            src="../../img/undo.svg"
+          />
+          <img
+            onclick="openeditaccountmodal()"
+            class="editbtn"
+            src="../../img/edit.svg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gridcontent1 useractivities">
+    <div class="fullwidth fullheight maingridpage2">
+      <div class="gridcontent2 spacing"></div>
+      <div class="gridcontent2 fullheight stripelabel">
+        <h3 class="userinfotitlepadding">Activities</h3>
+        <div class="fullwidth whitestripelabel"></div>
+      </div>
+      <div class="gridcontent2 fullheight activitydatades">
+        <div class="outer2tbl1">
+          <div class="outertbl1">
+            <table class="tbldes1" id="activitylog"></table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

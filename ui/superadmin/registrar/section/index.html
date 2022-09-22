@@ -1,0 +1,28 @@
+<div class="modal-content1">
+  <div class="modal-header1">
+    <span class="close1" onclick="closefirstmodal()">&times;</span>
+    <h3>Section</h3>
+  </div>
+  <div class="modal-body1">
+    <div class="inputpadding">
+      <select
+        class="dropdowndes1"
+        id="sectionschoollevelid"
+        onchange="loaddropdownyrsection()"
+      ></select>
+      <select
+        class="dropdowndes1"
+        id="sectionyearlevelid"
+        onchange="loaddropdownsection()"
+      ></select>
+      <input class="inputtextdes1" type="text" id="sectionidtext" />
+      <select class="dropdowndes1" id="sectionid"></select>
+    </div>
+    <div class="btnpadding">
+      <button class="btndes1" onclick="savesection()">SAVE</button>
+    </div>
+    <div class="btnpadding">
+      <button class="btndes1" onclick="deletesection()">DELETE</button>
+    </div>
+  </div>
+</div>

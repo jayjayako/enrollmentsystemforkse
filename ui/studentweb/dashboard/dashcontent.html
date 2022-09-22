@@ -1,0 +1,1224 @@
+<div class="dashcon-container">
+  <h3>DASHBOARD</h3>
+  <div class="dashcon-container__header">
+    <img src="../images/bgdashboard-edited.png" alt="" />
+    <div class="headertext">
+      <h3>Welcome</h3>
+      <h2>
+        <u><span id="studusername"></span></u>
+      </h2>
+      <!-- <p onclick="this.innerHTML=Date()"></p> -->
+      <p><span id="time"></span></p>
+    </div>
+  </div>
+
+  <div class="dashcon-container__progress">
+    <div class="container">
+      <ul class="progressbar">
+        <li class="active">Submit Requirements</li>
+        <li>Assessment</li>
+        <li>Submit Payment</li>
+        <li>Select Section</li>
+        <li>Officially Enrolled</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dashcon-container__grid">
+    <div class="inquire">
+      <div class="inquire__content1">
+        <img src="../images/inquire_vector1.png" alt="" />
+        <h3>Inquire Now</h3>
+        <button onclick="btninquire();">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
+
+    <div class="enroll">
+      <div class="enroll__content1">
+        <img src="../images/enroll_vector.png" alt="" />
+        <h3>Enroll Now</h3>
+        <button onclick="btnenroll();">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
+
+    <div class="msg">
+      <div class="msg__content1">
+        <img src="../images/message_vector1.png" alt="" />
+        <h3>Messages and Notifications</h3>
+        <button onclick="btnmsg();">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
+
+    <div class="account">
+      <div class="account__content1">
+        <img src="../images/balance_vector1.png" alt="" />
+        <h3>Account Balance</h3>
+        <button onclick="btnacc();">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODALS -->
+
+  <!-- INQUIRE MODAL -->
+
+  <div id="inq-mdl" class="inquire-mdl-contain">
+    <div class="inquire-mdl-contain-content">
+      <div class="inquire-mdl-contain-content__header">
+        <h3>Inquire Now</h3>
+        <span class="close" onclick="closeinq();">&times;</span>
+      </div>
+      <div class="inquire-mdl-contain-content__body">
+        <div>
+          <p>Content</p>
+          <div class="inq-content">
+            <textarea id="inquirenowinputtext" name="content"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="inquire-mdl-contain-content__footer">
+        <button onclick="enrollmentfunction('inquirenow')">SEND</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ENROLL NOW MODAL -->
+
+  <div id="enr-mdl" class="enr-mdl-contain">
+    <div class="enr-mdl-contain-content">
+      <div class="enr-mdl-contain-content__header">
+        <h3>Enroll as:</h3>
+        <span class="close" onclick="closeenroll();">&times;</span>
+      </div>
+      <div class="enr-mdl-contain-content__body">
+        <div class="body-con1">
+          <button onclick="newstudmdl()">NEW STUDENT</button>
+          <button onclick="oldstudmdl()">OLD STUDENT</button>
+          <button onclick="transtudmdl()">TRANSFEREE STUDENT</button>
+          <button onclick="forstudmdl()">FOREIGN STUDENT</button>
+        </div>
+      </div>
+      <div class="enr-mdl-contain-content__footer">
+        <div class="footer-con1"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEW STUDENT MODAL -->
+  <div id="new-stud-mdl" class="newstud-mdl-contain">
+    <div class="newstud-mdl-contain-content">
+      <div class="newstud-mdl-contain-content__header">
+        <h3>New Student</h3>
+        <span class="close" onclick="close_newstudmdl()">&times;</span>
+      </div>
+      <div class="newstud-mdl-contain-content__body">
+        <div class="con1">
+          <h3>Requirements:</h3>
+          <p>
+            Kindly complete files of requirements needed to proceed on the next
+            process
+          </p>
+        </div>
+        <div class="con2">
+          <h3>Input all requirements</h3>
+        </div>
+        <div class="con3">
+          <div class="con3-row1">
+            <div class="con3-row1-boxcon">
+              <div class="boxhead">
+                <p class="titlehead">Personal Information</p>
+              </div>
+              <div class="boxfile">
+                <button class="fillup" onclick="fillup()">
+                  <ion-icon name="pencil-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+
+            <div class="con3-row1-boxcon">
+              <div class="boxhead">
+                <p class="titlehead">form 137</p>
+                <p>FORM 137.PNG</p>
+              </div>
+              <div class="boxfile">
+                <input
+                  type="file"
+                  id="fileform137"
+                  name="fileform137"
+                  accept="image/x-png,image/gif,image/jpeg"
+                  style="display: none"
+                />
+                <button class="upload" onclick="getform137()">
+                  <ion-icon name="duplicate-outline"></ion-icon>
+                </button>
+                <button class="delete">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="con3-row1">
+            <div class="con3-row1-boxcon">
+              <div class="boxhead">
+                <p class="titlehead">birthcertificate</p>
+                <p>BIRTHCERTIFICATE.PNG</p>
+              </div>
+              <div class="boxfile">
+                <input
+                  type="file"
+                  id="filebirthcertificate"
+                  name="filebirthcertificate"
+                  accept="image/x-png,image/gif,image/jpeg"
+                  style="display: none"
+                />
+                <button class="upload" onclick="getbirthcertificate()">
+                  <ion-icon name="duplicate-outline"></ion-icon>
+                </button>
+                <button class="delete">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+
+            <div class="con3-row1-boxcon">
+              <div class="boxhead">
+                <p class="titlehead">goodmoral</p>
+                <p>GOODMORAL.PNG</p>
+              </div>
+              <div class="boxfile">
+                <input
+                  type="file"
+                  id="filegoodmoral"
+                  name="filegoodmoral"
+                  accept="image/x-png,image/gif,image/jpeg"
+                  style="display: none"
+                />
+                <button class="upload" onclick="getgoodmoral()">
+                  <ion-icon name="duplicate-outline"></ion-icon>
+                </button>
+                <button class="delete">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="con3-row1">
+            <div class="con3-row1-boxcon">
+              <div class="boxhead">
+                <p class="titlehead">recommendation form</p>
+                <p>RECOMMENDATION FORM.PNG</p>
+              </div>
+              <div class="boxfile">
+                <input
+                  type="file"
+                  id="filerecommendadtionform"
+                  name="filerecommendadtionform"
+                  accept="image/x-png,image/gif,image/jpeg"
+                  style="display: none"
+                />
+                <button class="upload" onclick="getrecommendationform()">
+                  <ion-icon name="duplicate-outline"></ion-icon>
+                </button>
+                <button class="delete">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+
+            <div class="con3-row1-boxcon">
+              <div class="boxhead">
+                <p class="titlehead">letter of guarantee</p>
+                <p>LETTER OF GUARANTEE.PNG</p>
+              </div>
+              <div class="boxfile">
+                <input
+                  type="file"
+                  id="fileletterofguarantee"
+                  name="fileletterofguarantee"
+                  accept="image/x-png,image/gif,image/jpeg"
+                  style="display: none"
+                  class="fileinputdes"
+                />
+                <button class="upload" onclick="getletterofguarantee()">
+                  <ion-icon name="duplicate-outline"></ion-icon>
+                </button>
+                <button class="delete">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="newstud-mdl-contain-content__footer">
+        <div class="footer-con1">
+          <button
+            onclick="enrollmentfunction('submitnewstudent')"
+            id="new-submit-open"
+            class="btn-pay"
+          >
+            SUBMIT
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OLD STUDENT -->
+  <div id="old-stud-mdl" class="newstud-mdl-contain">
+    <div class="newstud-mdl-contain-content">
+      <div class="newstud-mdl-contain-content__header">
+        <h3>Old Student</h3>
+        <span class="close" onclick="close_oldstudmdl();">&times;</span>
+      </div>
+      <div class="newstud-mdl-contain-content__body">
+        <div class="con1">
+          <h3>Requirements:</h3>
+          <p>
+            Kindly complete files of requirements needed to proceed on the next
+            process
+          </p>
+        </div>
+        <div class="con2">
+          <h3>Input all requirements</h3>
+        </div>
+        <div class="con3">
+          <div class="con3-row1">
+            <div class="con3-row1-boxcon">
+              <div class="boxhead">
+                <p class="titlehead">Gradeslip</p>
+                <p>GRADESLIP.pdf</p>
+              </div>
+              <div class="boxfile">
+                <input
+                  type="file"
+                  id="filegradeslip"
+                  accept="image/x-png,image/gif,image/jpeg"
+                  style="display: none"
+                />
+                <button class="upload" onclick="getgradeslip()">
+                  <ion-icon name="duplicate-outline"></ion-icon>
+                </button>
+                <button class="delete">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="newstud-mdl-contain-content__footer">
+        <div class="footer-con1">
+          <button
+            id="old-submit-open"
+            class="btn-pay"
+            onclick="enrollmentfunction('submitoldstudent')"
+          >
+            SUBMIT
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRANSFEREE STUDENT -->
+  <div id="trans-stud-mdl" class="newstud-mdl-contain">
+    <div class="newstud-mdl-contain-content">
+      <div class="newstud-mdl-contain-content__header">
+        <h3>Transferee Student</h3>
+        <span class="close" onclick="close_transtudmdl();">&times;</span>
+      </div>
+      <div class="newstud-mdl-contain-content__body">
+        <div class="con1">
+          <h3>Requirements:</h3>
+          <p>
+            Kindly complete files of requirements needed to proceed on the next
+            process
+          </p>
+        </div>
+        <div class="con2">
+          <h3>Input all requirements</h3>
+        </div>
+        <div class="con3">
+          <div class="con3-row1">
+            <div class="con3-row1-boxcon">
+              <div class="boxhead">
+                <p class="titlehead">Personal Information</p>
+                <p>File.pdf</p>
+              </div>
+              <div class="boxfile">
+                <button class="fillup" onclick="fillup();">
+                  <ion-icon name="pencil-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+
+            <div class="con3-row1-boxcon">
+              <div class="boxhead">
+                <p class="titlehead">Form 137</p>
+                <p>FORM 137.PNG</p>
+              </div>
+              <div class="boxfile">
+                <input
+                  type="file"
+                  id="filetransform137"
+                  accept="image/x-png,image/gif,image/jpeg"
+                  style="display: none"
+                />
+                <button class="upload" onclick="gettransform137()">
+                  <ion-icon name="duplicate-outline"></ion-icon>
+                </button>
+                <button class="delete">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="con3-row1">
+            <div class="con3-row1-boxcon">
+              <div class="boxhead">
+                <p class="titlehead">Transcript of Records(TOR)</p>
+                <p>TRANSCRIPT OF RECORDS.PNG</p>
+              </div>
+              <div class="boxfile">
+                <input
+                  type="file"
+                  id="filetor"
+                  accept="image/x-png,image/gif,image/jpeg"
+                  style="display: none"
+                />
+                <button class="upload" onclick="gettor()">
+                  <ion-icon name="duplicate-outline"></ion-icon>
+                </button>
+                <button class="delete">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+
+            <div class="con3-row1-boxcon">
+              <div class="boxhead">
+                <p class="titlehead">Transfer Credentials</p>
+                <p>TRANSFER CREDENTIALS.PNG</p>
+              </div>
+              <div class="boxfile">
+                <input
+                  type="file"
+                  id="filetransfercred"
+                  accept="image/x-png,image/gif,image/jpeg"
+                  style="display: none"
+                />
+                <button class="upload" onclick="gettransfercred()">
+                  <ion-icon name="duplicate-outline"></ion-icon>
+                </button>
+                <button class="delete">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="con3-row1">
+            <div class="con3-row1-boxcon">
+              <div class="boxhead">
+                <p class="titlehead">Honorable Dismissal</p>
+                <p>HONORABLE DISMISSAL.PNG</p>
+              </div>
+              <div class="boxfile">
+                <input
+                  type="file"
+                  id="filehondiss"
+                  accept="image/x-png,image/gif,image/jpeg"
+                  style="display: none"
+                />
+                <button class="upload" onclick="gethondiss()">
+                  <ion-icon name="duplicate-outline"></ion-icon>
+                </button>
+                <button class="delete">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+
+            <div class="con3-row1-boxcon">
+              <div class="boxhead">
+                <p class="titlehead">Good Moral</p>
+                <p>GOOD MORAL.PNG</p>
+              </div>
+              <div class="boxfile">
+                <input
+                  type="file"
+                  id="filetransgoodmoral"
+                  accept="image/x-png,image/gif,image/jpeg"
+                  style="display: none"
+                />
+                <button class="upload" onclick="gettransgoodmoral()">
+                  <ion-icon name="duplicate-outline"></ion-icon>
+                </button>
+                <button class="delete">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="newstud-mdl-contain-content__footer">
+        <div class="footer-con1">
+          <button
+            id="tra-submit-open"
+            class="btn-pay"
+            onclick="enrollmentfunction('submittransfereeenrollment')"
+          >
+            SUBMIT
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOREIGN STUDENT -->
+  <div id="for-stud-mdl" class="newstud-mdl-contain">
+    <div class="newstud-mdl-contain-content">
+      <div class="newstud-mdl-contain-content__header">
+        <h3>Foreign Student</h3>
+        <span class="close" onclick="close_forstudmdl();">&times;</span>
+      </div>
+      <div class="newstud-mdl-contain-content__body">
+        <div class="con1">
+          <h3>Requirements:</h3>
+          <p>
+            Kindly complete files of requirements needed to proceed on the next
+            process
+          </p>
+        </div>
+        <div class="con2">
+          <h3>Input all requirements</h3>
+        </div>
+        <div class="con3">
+          <div class="con3-row1">
+            <div class="con3-row1-boxcon">
+              <div class="boxhead">
+                <p class="titlehead">Personal Information</p>
+                <p>File.pdf</p>
+              </div>
+              <div class="boxfile">
+                <button class="fillup" onclick="fillup();">
+                  <ion-icon name="pencil-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+
+            <div class="con3-row1-boxcon">
+              <div class="boxhead">
+                <p class="titlehead">Authenticated Transcript of Records</p>
+                <p>ATR.PNG</p>
+              </div>
+              <div class="boxfile">
+                <input
+                  type="file"
+                  id="fileatr"
+                  accept="image/x-png,image/gif,image/jpeg"
+                  style="display: none"
+                />
+                <button class="upload" onclick="getatr()">
+                  <ion-icon name="duplicate-outline"></ion-icon>
+                </button>
+                <button class="delete">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="con3-row1">
+            <div class="con3-row1-boxcon">
+              <div class="boxhead">
+                <p class="titlehead">Alien Certificate of Registration(ACR)</p>
+                <p>ACR.PNG</p>
+              </div>
+              <div class="boxfile">
+                <input
+                  type="file"
+                  id="fileacr"
+                  accept="image/x-png,image/gif,image/jpeg"
+                  style="display: none"
+                />
+                <button class="upload" onclick="getacr()">
+                  <ion-icon name="duplicate-outline"></ion-icon>
+                </button>
+                <button class="delete">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+
+            <div class="con3-row1-boxcon">
+              <div class="boxhead">
+                <p class="titlehead">
+                  Certificate of Residence for Temporary Students(CRTS)
+                </p>
+                <p>CRTS.PNG</p>
+              </div>
+              <div class="boxfile">
+                <input
+                  type="file"
+                  id="filecrts"
+                  accept="image/x-png,image/gif,image/jpeg"
+                  style="display: none"
+                />
+                <button class="upload" onclick="getcrts()">
+                  <ion-icon name="duplicate-outline"></ion-icon>
+                </button>
+                <button class="delete">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="con3-row1">
+            <div class="con3-row1-boxcon">
+              <div class="boxhead">
+                <p class="titlehead">Students Visa</p>
+                <p>STUDENTS VISA.PNG</p>
+              </div>
+              <div class="boxfile">
+                <input
+                  type="file"
+                  id="filestudentvisa"
+                  accept="image/x-png,image/gif,image/jpeg"
+                  style="display: none"
+                />
+                <button class="upload" onclick="getstudentvisa()">
+                  <ion-icon name="duplicate-outline"></ion-icon>
+                </button>
+                <button class="delete">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+
+            <div class="con3-row1-boxcon">
+              <div class="boxhead">
+                <p class="titlehead">Id Pictures</p>
+                <p>I.D PICTURES.PNG</p>
+              </div>
+              <div class="boxfile">
+                <input
+                  type="file"
+                  id="fileidpictures"
+                  accept="image/x-png,image/gif,image/jpeg"
+                  style="display: none"
+                />
+                <button class="upload" onclick="getidpictures()">
+                  <ion-icon name="duplicate-outline"></ion-icon>
+                </button>
+                <button class="delete">
+                  <ion-icon name="trash-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="newstud-mdl-contain-content__footer">
+        <div class="footer-con1">
+          <button
+            id="for-submit-open"
+            class="btn-pay"
+            onclick="enrollmentfunction('submitforeignerenrollment')"
+          >
+            SUBMIT
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUBMITTED SUCCESSFULLY -->
+  <div id="submit-mdl" class="submit-mdl-contain">
+    <div class="submit-mdl-contain-content">
+      <div class="submit-mdl-contain-content__header">
+        <h3></h3>
+      </div>
+      <div class="submit-mdl-contain-content__body">
+        <div class="con1">
+          <img src="../images/submit_vector.png" alt="" />
+          <h3>Successfully Submitted!</h3>
+          <p>
+            Please wait for the admin's approval to proceed on the next process.
+          </p>
+        </div>
+      </div>
+      <div class="submit-mdl-contain-content__footer">
+        <div class="footer-con1">
+          <button id="submit-done" class="btn-submit">DONE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MESSAGE MODAL -->
+
+  <div id="msg-mdl" class="msg-mdl-contain">
+    <div class="msg-mdl-contain-content">
+      <div class="msg-mdl-contain-content__header">
+        <h3>Messages and Notifications</h3>
+        <span class="close" onclick="closemsg();">&times;</span>
+      </div>
+      <div class="msg-mdl-contain-content__body">
+        <div class="msg-mdl-contain-content__body__con1">
+          <div
+            id="messageandnotifid"
+            style="height: 200px; overflow: scroll"
+          ></div>
+        </div>
+      </div>
+      <div class="msg-mdl-contain-content__footer"></div>
+    </div>
+  </div>
+
+  <!-- ACCOUNT BALANCE MODAL -->
+
+  <div id="acc-mdl" class="acc-mdl-contain">
+    <div class="acc-mdl-contain-content">
+      <div class="acc-mdl-contain-content__header">
+        <h3>Account Balance</h3>
+        <span class="close" onclick="closeacc();">&times;</span>
+      </div>
+      <div class="acc-mdl-contain-content__body">
+        <div class="con1">
+          <h1 id="accountbalanceid"></h1>
+          <p>Balance</p>
+        </div>
+        <div class="con2">
+          <table id="accountbalancetableid"></table>
+        </div>
+      </div>
+      <div class="acc-mdl-contain-content__footer">
+        <div class="footer-con1">
+          <button
+            class="btn-pay"
+            onclick="accountbalancefunction('accountbalancepaymentmethod')"
+          >
+            PAY
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACCOUNT BALANCE -- SELECT MODE OF PAYMENT AND PAY FOR THE SPECIFIC AMOUNT -->
+  <div id="acb-selmd-paymt" class="acb-selmd-mdl-contain">
+    <div class="acb-selmd-mdl-contain-content">
+      <div class="acb-selmd-mdl-contain-content__header">
+        <h3>Method of Payment</h3>
+        <span
+          class="close"
+          id=""
+          onclick="accountbalancefunction('closemethod');"
+          >&times;</span
+        >
+      </div>
+      <div class="acb-selmd-mdl-contain-content__body">
+        <div class="con1">
+          <h3>Please pay for this amount</h3>
+          <h2 id="totalaccountbalanceid"></h2>
+
+          <div class="paymtd-sel">
+            <p>Select Payment Method</p>
+            <select name="" id="accountbalancepaymentmethod"></select>
+          </div>
+
+          <div class="paymtd-pay">
+            <h3>Send your payment to this account</h3>
+            <div style="display: flex">
+              <p>Account Name:</p>
+              <p id="accountblncemethodaccountnameid"></p>
+            </div>
+
+            <div style="display: flex">
+              <p>Account No.:</p>
+              <p id="accountblncemethodaccountnoid"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="acb-selmd-mdl-contain-content__footer">
+        <div class="footer-con1">
+          <button
+            id=""
+            class="btn-submit"
+            onclick="accountbalancefunction('uploadpay');"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACCOUNT BALANCE -- PAY AMOUNT -->
+  <div id="acb-payamt" class="acb-payamt-mdl-contain">
+    <div class="acb-payamt-mdl-contain-content">
+      <div class="acb-payamt-mdl-contain-content__header">
+        <h3>Payment</h3>
+        <span
+          class="close"
+          id=""
+          onclick="accountbalancefunction('closeuploadpay');"
+          >&times;</span
+        >
+      </div>
+      <div class="acb-payamt-mdl-contain-content__body">
+        <div class="con1">
+          <h3>Amount Sent</h3>
+          <input type="text" id="proofpaymentbalanceamountid" />
+        </div>
+        <div class="con1">
+          <h3>Upload Payment Receipt</h3>
+
+          <div class="file-con">
+            <div class="boxfile">
+              <p>SAMPLE FILE</p>
+            </div>
+            <input
+              type="file"
+              id="balanceproofpaymentid"
+              accept="image/x-png,image/gif,image/jpeg"
+              style="display: none"
+            />
+            <div onclick="getbalanceproofpayment()" class="boxupfile">
+              <ion-icon name="duplicate-outline"></ion-icon>
+              <p>Add File</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="acb-payamt-mdl-contain-content__footer">
+        <div class="footer-con1">
+          <button
+            id=""
+            class="btn-submit"
+            onclick="accountbalancefunction('uploadbalance');"
+          >
+            SUBMIT
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LALAGYAN NA LANG TO NG CODE PARA MAG POP UP -->
+  <!-- SELECT SCHOOL LEVEL -->
+
+  <div id="selectsclvl" class="selectsclvl-mdl-contain">
+    <div class="selectsclvl-mdl-contain-content">
+      <div class="selectsclvl-mdl-contain-content__header">
+        <h3>Select School and Year Level</h3>
+        <span class="close" id="" onclick="closemodal('selectschoollevel')"
+          >&times;</span
+        >
+      </div>
+      <div class="selectsclvl-mdl-contain-content__body">
+        <div class="con1">
+          <select
+            id="sclvlid"
+            onchange="assesmentfunction('yearlevel')"
+          ></select>
+          <select id="yrlvlid"></select>
+        </div>
+      </div>
+      <div class="selectsclvl-mdl-contain-content__footer">
+        <div class="footer-con1">
+          <button
+            id=""
+            class="btn-submit"
+            onclick="assesmentfunction('displaytuitionotherfees')"
+          >
+            NEXT
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TUITION FEE AND OTHER FEES -->
+  <div id="tuitionfee" class="tfee-mdl-contain">
+    <div class="tfee-mdl-contain-content">
+      <div class="tfee-mdl-contain-content__header">
+        <h3>Tuition and Other Fees</h3>
+        <span class="close" id="" onclick="closemodal('tuitionandotherfees')"
+          >&times;</span
+        >
+      </div>
+      <div class="tfee-mdl-contain-content__body">
+        <div class="con1">
+          <h4>Payment Plans</h4>
+
+          <table id="paymentplanstbl"></table>
+
+          <h4>Other Fees</h4>
+          <table id="otherfeestbl"></table>
+        </div>
+      </div>
+      <div class="tfee-mdl-contain-content__footer">
+        <div class="footer-con1">
+          <button
+            id=""
+            class="btn-submit"
+            onclick="assesmentfunction('displaytypeofpayment')"
+          >
+            NEXT
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SELECT TYPE OF PAYMENT -->
+  <div id="seltypepay" class="seltypepay-mdl-contain">
+    <div class="seltypepay-mdl-contain-content">
+      <div class="seltypepay-mdl-contain-content__header">
+        <h3>Select Type of Payment</h3>
+        <span class="close" id="" onclick="closemodal('selecttypeofpayment')"
+          >&times;</span
+        >
+      </div>
+      <div class="seltypepay-mdl-contain-content__body">
+        <div class="con1">
+          <select
+            name=""
+            id="paymenttypedropdownid"
+            onchange="assesmentfunction('updatedpaymenttype')"
+          ></select>
+
+          <h4>
+            You selected [
+            <p id="paymenttypeselectedid"></p>
+            ]
+          </h4>
+          <div class="con-table">
+            <table id="paymenttypetblid"></table>
+          </div>
+        </div>
+      </div>
+      <div class="tfee-mdl-contain-content__footer">
+        <div class="footer-con1">
+          <button
+            id=""
+            class="btn-submit"
+            onclick="assesmentfunction('displaypaymentmethod')"
+          >
+            NEXT
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SELECT MODE OF PAYMENT AND PAY FOR THE SPECIFIC AMOUNT -->
+  <div id="selmd-paymt" class="selmd-mdl-contain">
+    <div class="selmd-mdl-contain-content">
+      <div class="selmd-mdl-contain-content__header">
+        <h3>Method of Payment</h3>
+        <span class="close" id="" onclick="closemodal('selectpaymentmethod')"
+          >&times;</span
+        >
+      </div>
+      <div class="selmd-mdl-contain-content__body">
+        <div class="con1">
+          <h3>Please pay for this amount</h3>
+          <div style="display: flex">
+            <h2 id="amountneedtopayid"></h2>
+          </div>
+
+          <div class="paymtd-sel">
+            <p>Select Payment Method</p>
+            <select
+              name=""
+              id="paymentmethoddropdownid"
+              onchange="assesmentfunction('displaymethodaccount')"
+            ></select>
+          </div>
+
+          <div class="paymtd-pay">
+            <h3>Send your payment to this account</h3>
+            <div style="display: flex">
+              <p>Account Name:</p>
+              <p id="paymentmethodaccountnameid"></p>
+            </div>
+
+            <div style="display: flex">
+              <p>Account No.:</p>
+              <p id="paymentmethodaccountnoid"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="selmd-mdl-contain-content__footer">
+        <div class="footer-con1">
+          <button
+            id=""
+            class="btn-submit"
+            onclick="assesmentfunction('displayuploadpayment')"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAY AMOUNT -->
+  <div id="payamt" class="payamt-mdl-contain">
+    <div class="payamt-mdl-contain-content">
+      <div class="payamt-mdl-contain-content__header">
+        <h3>Payment</h3>
+        <span class="close" id="" onclick="closemodal('selectuploadpayment')"
+          >&times;</span
+        >
+      </div>
+      <div class="payamt-mdl-contain-content__body">
+        <div class="con1">
+          <h3>Amount Sent</h3>
+          <input type="text" id="proofpaymentamountid" />
+        </div>
+        <div class="con1">
+          <h3>Upload Payment Receipt</h3>
+
+          <div class="file-con">
+            <input
+              type="file"
+              id="proofpaymentid"
+              accept="image/x-png,image/gif,image/jpeg"
+              style="display: none"
+            />
+            <div onclick="getproofpayment()" class="boxupfile">
+              <ion-icon name="duplicate-outline"></ion-icon>
+              <p>Add File</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="payamt-mdl-contain-content__footer">
+        <div class="footer-con1">
+          <button
+            id=""
+            class="btn-submit"
+            onclick="assesmentfunction('uploadassessment')"
+          >
+            SUBMIT
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAY SUCCESSFULLY SUBMITTED -->
+  <div id="paysub" class="paysub-mdl-contain">
+    <div class="paysub-mdl-contain-content">
+      <div class="paysub-mdl-contain-content__header">
+        <h3></h3>
+      </div>
+      <div class="paysub-mdl-contain-content__body">
+        <div class="con1">
+          <img src="../images/approved_vector_1.png" alt="" />
+          <h4>Successfully Submitted!</h4>
+          <p>
+            Please wait for the cashier's approval of your payment. You'll be
+            notified once approved.
+          </p>
+        </div>
+      </div>
+      <div class="paysub-mdl-contain-content__footer">
+        <div class="footer-con1">
+          <button
+            id=""
+            class="btn-submit"
+            onclick="closemodal('selectuploadpaysuccess')"
+          >
+            DONE
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SELECT SECTION -->
+
+  <div id="selectsect" class="selectsect-mdl-contain">
+    <div class="selectsect-mdl-contain-content">
+      <div class="selectsect-mdl-contain-content__header">
+        <h3>Select Section</h3>
+        <span class="close" id="" onclick="closemodal('selectsection')"
+          >&times;</span
+        >
+      </div>
+      <div class="selectsect-mdl-contain-content__body">
+        <div class="con1">
+          <select id="sclvl"></select>
+        </div>
+      </div>
+      <div class="selectsect-mdl-contain-content__footer">
+        <div class="footer-con1">
+          <button
+            id=""
+            class="btn-submit"
+            onclick="enlistmentfunction('displayschedule')"
+          >
+            NEXT
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISPLAY SCHEDULE -->
+
+  <div id="displaysched" class="displaysched-mdl-contain">
+    <div class="displaysched-mdl-contain-content">
+      <div class="displaysched-mdl-contain-content__header">
+        <h3>Schedule</h3>
+        <span class="close" id="" onclick="closemodal('displayschedule')"
+          >&times;</span
+        >
+      </div>
+      <div class="displaysched-mdl-contain-content__body">
+        <div class="con1">
+          <img id="displayscheduleid" src="../images/loginbg.png" alt="" />
+        </div>
+      </div>
+      <div class="displaysched-mdl-contain-content__footer">
+        <div class="footer-con1">
+          <button
+            id=""
+            class="btn-submit"
+            onclick="enlistmentfunction('submitenlistment')"
+          >
+            OKAY
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FILL UP REQUIREMENTS -->
+  <div id="fillreq" class="fillreq-mdl-contain">
+    <div class="fillreq-mdl-contain-content">
+      <div class="fillreq-mdl-contain-content__header">
+        <h3>Fill up requirements</h3>
+      </div>
+      <div class="fillreq-mdl-contain-content__body">
+        <div class="con1">
+          <div class="rows">
+            <h4>PERSONAL INFORMATION</h4>
+            <div class="rows-2col">
+              <div>
+                <p>Lastname</p>
+                <input id="admissionlastname" type="text" />
+              </div>
+              <div>
+                <p>Firstname</p>
+                <input id="admissionfirstname" type="text" />
+              </div>
+            </div>
+            <div class="rows-2col">
+              <div>
+                <p>Birthdate</p>
+                <input id="admissionbirthdate" type="text" />
+              </div>
+              <div>
+                <p>Gender</p>
+                <input id="admissiongender" type="text" />
+              </div>
+            </div>
+            <div class="rows-2col">
+              <div>
+                <p>Address</p>
+                <input id="admissionaddress" type="text" />
+              </div>
+              <div>
+                <p>Contact No.</p>
+                <input id="admissioncontactnumber" type="text" />
+              </div>
+            </div>
+            <h4>PARENTS INFORMATION</h4>
+            <div class="rows-2col">
+              <div>
+                <p>Mother's Name</p>
+                <input id="admissionmothersname" type="text" />
+              </div>
+              <div>
+                <p>Father's Name</p>
+                <input id="admissionfathersname" type="text" />
+              </div>
+            </div>
+            <div class="rows-2col">
+              <div>
+                <p>Occupation</p>
+                <input id="admissionmothoccupation" type="text" />
+              </div>
+              <div>
+                <p>Occupation</p>
+                <input id="admissionfathoccupation" type="text" />
+              </div>
+            </div>
+            <div class="rows-2col">
+              <div>
+                <p>Contact No.</p>
+                <input id="admissionmothnumber" type="text" />
+              </div>
+              <div>
+                <p>Contact No.</p>
+                <input id="admissionfathnumber" type="text" />
+              </div>
+            </div>
+
+            <h4>GUARDIAN'S INFORMATION</h4>
+            <div class="rows-2col">
+              <div>
+                <p>Guardian's Name</p>
+                <input id="admissionguardiansname" type="text" />
+              </div>
+              <div>
+                <p>Relationship to Guardian</p>
+                <input id="admissionrelguardian" type="text" />
+              </div>
+            </div>
+            <div class="rows-2col">
+              <div>
+                <p>Contact No.</p>
+                <input id="admissionguardnumber" type="text" />
+              </div>
+              <div>
+                <p>Guardian's Address</p>
+                <input id="admissionguardsaddress" type="text" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fillreq-mdl-contain-content__footer">
+        <div class="footer-con1">
+          <button onclick="close_fillup();" class="btn-clear">CANCEL</button>
+          <button onclick="close_fillup();" id="" class="btn-submit">
+            DONE
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+  font: 100%;
+  font-family: "Barlow", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*::before *::after {
+  box-sizing: inherit;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@200&display=swap");

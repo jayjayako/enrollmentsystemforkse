@@ -1,0 +1,100 @@
+<style>
+  .other-fees-modalwidth {
+    width: 70%;
+    margin-top: -60px;
+    height: 580px;
+    overflow: hidden;
+  }
+  .otherfeesformdes {
+    border: 1px solid var(--blueGreen);
+    border-radius: 10px;
+    height: 30%;
+  }
+  .inputpadding {
+    padding: 10px;
+  }
+  .dropdowndes1 {
+    width: 100%;
+  }
+  .otherfeestext1 {
+    width: 33.33%;
+  }
+  .otherfeesoutertbl {
+    height: 40%;
+  }
+</style>
+<div class="modal-content1 other-fees-modalwidth">
+  <div class="modal-header1">
+    <span class="close1" onclick="closefirstmodal()">&times;</span>
+    <h3>Other Fees</h3>
+  </div>
+  <div class="modal-body1">
+    <div class="otherfeesformdes">
+      <div class="fullwidth flexbox">
+        <div class="inputpadding fullwidth">
+          <label>School Level</label><br />
+          <select
+            class="dropdowndes1"
+            onchange="otherfeesfunc('loaddropdownyearlevel')"
+            id="schoollevelid"
+          ></select>
+        </div>
+        <div class="inputpadding fullwidth">
+          <label>Year Level</label><br />
+          <select class="dropdowndes1" id="yearlevelid"></select>
+        </div>
+        <div class="inputpadding fullwidth">
+          <label>Particular</label><br />
+          <input class="inputtextdes1" type="text" id="particularid" />
+        </div>
+      </div>
+      <div class="fullwidth flexbox">
+        <div class="inputpadding fullwidth otherfeestext1">
+          <label>Amount</label><br />
+          <input class="inputtextdes1" type="text" id="amountid" />
+        </div>
+      </div>
+    </div>
+    <div class="flexbox">
+      <div class="inputpadding fullwidth">
+        <button class="btndes1" onclick="otherfeesfunc('addnewotherfees')">
+          ADD
+        </button>
+      </div>
+      <div class="inputpadding fullwidth">
+        <button class="btndes1" onclick="otherfeesfunc('updateotherfees')">
+          UPDATE
+        </button>
+      </div>
+      <div class="inputpadding fullwidth">
+        <button class="btndes1" onclick="otherfeesfunc('deleteotherfees')">
+          DELETE
+        </button>
+      </div>
+    </div>
+    <div class="flexbox">
+      <div class="inputpadding">
+        <h4>Filter</h4>
+      </div>
+      <div class="inputpadding fullwidth">
+        <select
+          class="dropdowndes1"
+          onchange="otherfeesfunc('loaddropdownyearlevel2')"
+          id="filschoollevelid"
+        ></select>
+      </div>
+      <div class="inputpadding fullwidth">
+        <select
+          class="dropdowndes1"
+          onchange="otherfeesfunc('displayotherfeesfiltertable')"
+          id="filyearlevelid"
+        ></select>
+      </div>
+    </div>
+    <div class="outer2tbl1 otherfeesoutertbl">
+      <div class="outertbl1">
+        <table class="tbldes1" id="otherfeestableresult"></table>
+      </div>
+    </div>
+  </div>
+</div>

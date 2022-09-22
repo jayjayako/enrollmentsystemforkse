@@ -1,0 +1,108 @@
+<style>
+  .sidenavlogo {
+    padding: 5px;
+    width: 150px;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .sidenavheight {
+    height: 55px;
+    width: 98%;
+  }
+  .imgsizedes15 {
+    width: 13%;
+    height: auto;
+    padding-left: 10px;
+    background-color: var(--white);
+  }
+  .sidenavlabel {
+    margin-top: 10px;
+    padding-left: 10px;
+  }
+  .sidenavcontent ion-icon {
+    margin-left: 10px;
+    font-size: 25px;
+    --ionicon-stroke-width: 50px;
+  }
+
+  .sidenavcardactive {
+    display: grid;
+    grid-template-columns: 3% 97%;
+  }
+
+  .sidenavcardactive .sidenavstrip {
+    background-color: var(--violet);
+  }
+
+  .sidenavcardactive .sidenavcontent {
+    background-color: var(--blueGreen);
+    color: var(--white);
+  }
+</style>
+<div class="blockbox fullwidth fullheight">
+  <div class="fullwidth flexbox">
+    <img src="../../img/knowledgeville_nobackground.png" class="sidenavlogo" />
+  </div>
+  <div class="sidenavcard sidenavheight" onclick="gotohome()">
+    <div class="sidenavstrip"></div>
+    <div class="sidenavcontent fullheight fullwidth flexcontent">
+      <ion-icon name="home-outline"></ion-icon>
+      <h3 class="sidenavlabel">Home</h3>
+    </div>
+  </div>
+  <div
+    class="sidenavcard sidenavheight"
+    id="addnewstaffsidenavid"
+    onclick="gotoaddnewstaff()"
+  >
+    <div class="sidenavstrip"></div>
+    <div class="sidenavcontent fullheight fullwidth flexcontent">
+      <ion-icon name="person-add-outline"></ion-icon>
+      <h3 class="sidenavlabel">Add New Staff</h3>
+    </div>
+  </div>
+  <div
+    class="sidenavcard sidenavheight"
+    id="managestaffsidenavid"
+    onclick="gotomanagestaff()"
+  >
+    <div class="sidenavstrip"></div>
+    <div class="sidenavcontent fullheight fullwidth flexcontent">
+      <ion-icon name="body-outline"></ion-icon>
+      <h3 class="sidenavlabel">Manage Staff</h3>
+    </div>
+  </div>
+  <div
+    class="sidenavcard sidenavheight sidenavcardactive"
+    id="managestudentsidenavid"
+  >
+    <div class="sidenavstrip"></div>
+    <div class="sidenavcontent fullheight fullwidth flexcontent">
+      <ion-icon name="file-tray-full-outline"></ion-icon>
+      <h3 class="sidenavlabel">Manage Student</h3>
+    </div>
+  </div>
+  <div
+    class="sidenavcard sidenavheight"
+    id="audittrailsidenavid"
+    onclick="gotoaudittrail()"
+  >
+    <div class="sidenavstrip"></div>
+    <div class="sidenavcontent fullheight fullwidth flexcontent">
+      <ion-icon name="clipboard-outline"></ion-icon>
+      <h3 class="sidenavlabel">Audit Trail</h3>
+    </div>
+  </div>
+  <div
+    class="sidenavcard sidenavheight"
+    id="viewreportsidenavid"
+    onclick="gotoviewreport()"
+  >
+    <div class="sidenavstrip"></div>
+    <div class="sidenavcontent fullheight fullwidth flexcontent">
+      <ion-icon name="stats-chart-outline"></ion-icon>
+      <h3 class="sidenavlabel">View Report</h3>
+    </div>
+  </div>
+</div>

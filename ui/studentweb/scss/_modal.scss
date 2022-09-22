@@ -1,0 +1,2817 @@
+// INQUIRE MODAL
+.inquire-mdl-contain {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      background-color: $lightViolet;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      p {
+        padding: 5px 16px;
+      }
+
+      .inq-email {
+        position: relative;
+        width: 352px;
+
+        input[type="text"] {
+          width: 100%;
+          height: 25px;
+          border: none;
+          border-radius: 10px;
+          background-color: #e8e8e8;
+          padding: 2px 10px;
+          outline: none;
+          margin-top: 5px;
+        }
+      }
+
+      .inq-content {
+        width: 100%;
+        padding: 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        textarea {
+          width: 250px;
+          height: 50px;
+          border: none;
+          border-radius: 10px;
+          background-color: #e8e8e8;
+          padding: 10px 10px;
+          margin-top: 5px;
+          resize: none;
+          outline: none;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding: 0;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+
+      button {
+        border: none;
+        border-radius: 10px;
+        width: 100%;
+        height: 30px;
+        background-color: $violet;
+        cursor: pointer;
+        margin: 15px;
+        color: white;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+
+// MESSAGE AND NOTIF MODAL
+.msg-mdl-contain {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      background-color: $lightViolet;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      padding: 5px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      p {
+        margin-top: 5px;
+      }
+
+      &__con1 {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 5px;
+
+        .head-con1 {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          column-gap: 5px;
+
+          .btn-sort {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+          }
+
+          .btn-sort:hover {
+            background-color: rgb(230, 230, 230);
+            border-radius: 20px;
+          }
+
+          .btn-delete {
+            background-color: $violet;
+            border: none;
+            cursor: pointer;
+            padding: 5px 8px;
+            border-radius: 10px;
+            color: $white;
+            box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+          }
+
+          .btn-delete:hover {
+            opacity: 0.8;
+          }
+        }
+
+        .body-con1 {
+          height: 50px;
+          width: 100%;
+          background-color: rgb(230, 230, 230);
+          margin: 10px 0px 5px 0px;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding: 0;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+
+// ENROLL NOW MODAL
+.enr-mdl-contain {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      background-color: $lightViolet;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+
+      p {
+        margin-top: 5px;
+      }
+
+      .body-con1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+
+        button {
+          border: none;
+          background-color: $blueGreen;
+          padding: 5px 10px;
+          height: 40px;
+          width: 200px;
+          border-radius: 10px;
+          margin: 10px 0px 0px 10px;
+          box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+          cursor: pointer;
+        }
+
+        button:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding: 0;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 100%;
+
+      .footer-con1 {
+        width: 100%;
+        padding: 0px 10px 10px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        column-gap: 5px;
+
+        .btn-cancel {
+          background-color: transparent;
+          border: solid 1px $violet;
+          color: $violet;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px 10px;
+        }
+
+        .btn-cancel:hover {
+          background-color: #c48be7;
+          transition: 0.5s ease-in-out;
+        }
+
+        .btn-submit {
+          background-color: $violet;
+          border: none;
+          color: $white;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px 10px;
+          box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-submit:hover {
+          opacity: 0.8;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+
+// UPDATE REQ MODAL
+.upd-mdl-contain {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      background-color: $lightViolet;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      padding: 5px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      p {
+        margin-top: 5px;
+      }
+
+      .body-con1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        width: 100%;
+        height: auto;
+
+        &-con2 {
+          height: 80px;
+          width: 80px;
+          background-color: rgb(230, 230, 230);
+          margin: 10px 0px 5px 5px;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+        }
+
+        &-con3 {
+          height: 80px;
+          width: 80px;
+          background-color: rgb(230, 230, 230);
+          margin: 10px 0px 5px 5px;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          cursor: pointer;
+
+          ion-icon {
+            font-size: 24px;
+          }
+        }
+
+        &-con3:hover {
+          background-color: rgb(207, 207, 207);
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding: 0;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 100%;
+
+      .footer-con1 {
+        width: 100%;
+        padding: 0px 10px 10px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        column-gap: 5px;
+
+        .btn-cancel {
+          background-color: transparent;
+          border: solid 1px $violet;
+          color: $violet;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px 10px;
+        }
+
+        .btn-cancel:hover {
+          background-color: #c48be7;
+          transition: 0.5s ease-in-out;
+        }
+
+        .btn-submit {
+          background-color: $violet;
+          border: none;
+          color: $white;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px 10px;
+          box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-submit:hover {
+          opacity: 0.8;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+
+// ACCOUNT BALANCE MODAL
+.acc-mdl-contain {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      background-color: $lightViolet;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+
+      p {
+        margin-top: 5px;
+      }
+
+      .con1 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 0px 20px 0px;
+      }
+
+      .con2 {
+        display: flex;
+        flex-direction: row;
+        width: 95%;
+        justify-content: center;
+        column-gap: 10px;
+        background-color: rgb(230, 230, 230);
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+
+        table {
+          width: 100%;
+        }
+
+        th {
+          border-bottom: solid 2px $violet;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding: 0;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 100%;
+
+      .footer-con1 {
+        width: 100%;
+        padding: 0px 10px 10px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        column-gap: 5px;
+
+        .btn-pay {
+          background-color: $violet;
+          border: none;
+          color: $white;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px 10px;
+          box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-pay:hover {
+          opacity: 0.8;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+
+// NEW STUDENT
+.newstud-mdl-contain {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      background-color: $lightViolet;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin-top: 5px;
+      }
+
+      .con1 {
+        display: flex;
+        width: 100%;
+        justify-content: left;
+        align-items: left;
+        flex-direction: column;
+
+        p {
+          padding: 0px 20px;
+        }
+      }
+
+      .con2 {
+        text-align: left;
+        padding: 10px 0px 0px 0px;
+      }
+      .con3 {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        width: 100%;
+        justify-content: left;
+
+        &-row1 {
+          display: flex;
+          flex-direction: row;
+
+          &-boxcon {
+            display: flex;
+            justify-content: space-evenly;
+            height: 70px;
+            width: 225px;
+            background-color: rgb(230, 230, 230);
+            margin: 0px 15px;
+            border-radius: 10px;
+
+            .titlehead {
+              padding: 2px 10px;
+              width: 165px;
+              background-color: rgb(211, 211, 211);
+              border-top-left-radius: 10px;
+            }
+
+            p {
+              padding: 2px 10px;
+            }
+
+            .boxfile {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-evenly;
+              align-items: center;
+              width: auto;
+
+              button {
+                padding: 7px;
+                border-radius: 30px;
+                border: none;
+                box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+                cursor: pointer;
+              }
+
+              button:hover {
+                opacity: 0.8;
+              }
+
+              button,
+              .fillup {
+                background-color: royalblue;
+              }
+
+              button,
+              .upload {
+                background-color: yellowgreen;
+              }
+
+              button,
+              .delete {
+                background-color: rgb(255, 72, 72);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding: 0;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 100%;
+
+      .footer-con1 {
+        width: 100%;
+        padding: 10px 10px 10px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        column-gap: 5px;
+
+        .btn-pay {
+          background-color: $violet;
+          border: none;
+          color: $white;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px 10px;
+          box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-pay:hover {
+          opacity: 0.8;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.submit-mdl-contain {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      background-color: $lightViolet;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      height: 50px;
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin-top: 5px;
+      }
+
+      .con1 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        img {
+          width: auto;
+          height: 120px;
+          margin: 10px;
+        }
+
+        p {
+          width: 60%;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding: 0;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 100%;
+
+      .footer-con1 {
+        width: 100%;
+        padding: 10px 10px 10px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 5px;
+
+        .btn-submit {
+          background-color: $violet;
+          border: none;
+          color: $white;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px 10px;
+          box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-submit:hover {
+          opacity: 0.8;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.selectsclvl-mdl-contain {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      background-color: $lightViolet;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin-top: 5px;
+      }
+
+      .con1 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        select {
+          margin: 20px;
+          width: 80%;
+          height: 40px;
+          border-radius: 10px;
+          outline: none;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding: 0;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 100%;
+
+      .footer-con1 {
+        width: 100%;
+        padding: 10px 10px 10px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 5px;
+
+        .btn-submit {
+          background-color: $violet;
+          border: none;
+          color: $white;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px 10px;
+          box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-submit:hover {
+          opacity: 0.8;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.tfee-mdl-contain {
+  display: none;
+  position: fixed;
+  padding-top: 20px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      background-color: $lightViolet;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+      height: 500px;
+
+      p {
+        margin-top: 5px;
+      }
+
+      .con1 {
+        display: flex;
+        width: 100%;
+        justify-content: left;
+        align-items: left;
+        flex-direction: column;
+        text-align: center;
+
+        table {
+          border-radius: 10px;
+          margin: 10px;
+        }
+
+        th {
+          background-color: $blueGreen;
+          color: $white;
+        }
+
+        td {
+          text-align: left;
+        }
+
+        tr:nth-child(even) {
+          background-color: rgb(236, 236, 236);
+        }
+
+        .total-label {
+          text-align: left;
+          border-top: solid 2px $black;
+        }
+        .total-value {
+          text-align: left;
+          border-top: solid 2px $black;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding: 0;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 100%;
+
+      .footer-con1 {
+        width: 100%;
+        padding: 10px 10px 10px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 5px;
+
+        .btn-submit {
+          background-color: $violet;
+          border: none;
+          color: $white;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px 10px;
+          box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-submit:hover {
+          opacity: 0.8;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.seltypepay-mdl-contain {
+  display: none;
+  position: fixed;
+  padding-top: 20px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      background-color: $lightViolet;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin-top: 5px;
+      }
+
+      .con1 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+        select {
+          width: 60%;
+          height: 40px;
+          border-radius: 10px;
+          margin: 20px 0px 20px 0px;
+        }
+
+        .con-table {
+          display: flex;
+          align-items: left;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .con-addtb {
+          display: flex;
+          align-items: left;
+          flex-direction: column;
+          width: 100%;
+        }
+
+        table {
+          border-radius: 10px;
+          margin: 10px;
+          align-items: left;
+        }
+
+        th {
+          background-color: $blueGreen;
+          color: $white;
+        }
+
+        td {
+          text-align: left;
+        }
+
+        tr:nth-child(even) {
+          background-color: rgb(236, 236, 236);
+        }
+
+        .total-label {
+          text-align: left;
+          border-top: solid 2px $black;
+        }
+        .total-value {
+          text-align: left;
+          border-top: solid 2px $black;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding: 0;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 100%;
+
+      .footer-con1 {
+        width: 100%;
+        padding: 10px 10px 10px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 5px;
+
+        .btn-submit {
+          background-color: $violet;
+          border: none;
+          color: $white;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px 10px;
+          box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-submit:hover {
+          opacity: 0.8;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.payamt-mdl-contain {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      background-color: $lightViolet;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+
+      p {
+        margin-top: 5px;
+      }
+
+      .con1 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+        input[type="text"] {
+          padding: 5px 10px;
+          border-radius: 5px;
+          outline: none;
+          border: 1px solid $black;
+          text-align: center;
+        }
+
+        .file-con {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          width: 100%;
+          height: auto;
+
+          .boxfile {
+            height: 70px;
+            width: 70px;
+            background-color: rgb(233, 233, 233);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0px 10px 10px;
+            border-radius: 10px;
+          }
+
+          .boxupfile {
+            height: 70px;
+            width: 70px;
+            background-color: rgb(233, 233, 233);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0px 10px 10px;
+            border-radius: 10px;
+            box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+
+            ion-icon {
+              font-size: 20px;
+            }
+          }
+
+          .boxupfile:hover {
+            background-color: rgb(204, 204, 204);
+          }
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding: 0;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 100%;
+
+      .footer-con1 {
+        width: 100%;
+        padding: 10px 10px 10px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 5px;
+
+        .btn-submit {
+          background-color: $violet;
+          border: none;
+          color: $white;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px 10px;
+          box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-submit:hover {
+          opacity: 0.8;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+.selmd-mdl-contain {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      background-color: $lightViolet;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin-top: 5px;
+      }
+
+      .con1 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        row-gap: 10px;
+
+        h2 {
+          border-top: solid 2px $blueGreen;
+          border-bottom: solid 2px $blueGreen;
+        }
+
+        .paymtd-sel {
+          text-align: left;
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          row-gap: 5px;
+
+          select {
+            width: 100%;
+            padding: 5px 10px;
+            border-radius: 10px;
+          }
+        }
+
+        .paymtd-pay {
+          text-align: left;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding: 0;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 100%;
+
+      .footer-con1 {
+        width: 100%;
+        padding: 10px 10px 10px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 5px;
+
+        .btn-submit {
+          background-color: $violet;
+          border: none;
+          color: $white;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px 10px;
+          box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-submit:hover {
+          opacity: 0.8;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.paysub-mdl-contain {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      background-color: $lightViolet;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      height: 50px;
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin-top: 5px;
+      }
+
+      .con1 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+        img {
+          height: 150px;
+          width: auto;
+          margin: 10px;
+        }
+
+        p {
+          width: 250px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding: 0;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 100%;
+
+      .footer-con1 {
+        width: 100%;
+        padding: 10px 10px 10px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 5px;
+
+        .btn-submit {
+          background-color: $violet;
+          border: none;
+          color: $white;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px 10px;
+          box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-submit:hover {
+          opacity: 0.8;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.fillreq-mdl-contain {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      background-color: $lightViolet;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+      overflow: scroll;
+
+      p {
+        margin-top: 5px;
+      }
+
+      .con1 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+
+        .rows {
+          margin: 10px;
+          display: flex;
+          flex-direction: column;
+
+          h4 {
+            margin: 10px 10px 0px 10px;
+            padding: 10px 10px 10px 0px;
+            border-bottom: solid 2px $blueGreen;
+            color: $black;
+          }
+
+          &-2col {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%;
+            align-items: left;
+          }
+
+          input[type="text"] {
+            width: 200px;
+            height: 25px;
+            background-color: rgb(231, 231, 231);
+            border: none;
+            border-radius: 10px;
+            padding: 2px 5px;
+            outline: none;
+          }
+
+          input[type="text"]:focus {
+            background-color: rgb(219, 217, 217);
+            transition: 0.5s ease-in-out;
+          }
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding: 0;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 100%;
+
+      .footer-con1 {
+        width: 100%;
+        padding: 10px 10px 10px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        column-gap: 5px;
+
+        .btn-submit {
+          background-color: $violet;
+          border: none;
+          color: $white;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px 10px;
+          box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-clear {
+          background-color: transparent;
+          border: solid 1px $violet;
+          color: $violet;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px 10px;
+        }
+
+        .btn-submit:hover {
+          opacity: 0.8;
+          transition: 0.5s ease-in-out;
+        }
+
+        .btn-clear:hover {
+          background-color: $violet;
+          color: $white;
+          opacity: 0.7;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+
+// MY ACCOUNT -- EDIT PROFILE
+.editprof-mdl-contain {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      background-color: $lightViolet;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      h3 {
+        color: $black;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+      }
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      padding: 5px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 260px;
+      overflow: scroll;
+
+      .field-contain {
+        width: 100%;
+      }
+
+      fieldset {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        row-gap: 10px;
+        border: 0;
+
+        button {
+          padding: 5px 10px;
+          border-radius: 10px;
+          color: $violet;
+          border: 1px solid $violet;
+          cursor: pointer;
+        }
+
+        button:hover {
+          background-color: $violet;
+          color: $white;
+        }
+      }
+
+      legend {
+        color: $black;
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+      }
+
+      p {
+        margin-top: 5px;
+      }
+
+      .inq-email {
+        position: relative;
+        width: 352px;
+
+        input[type="text"] {
+          width: 100%;
+          height: 25px;
+          border: none;
+          border-radius: 10px;
+          background-color: #e8e8e8;
+          padding: 2px 10px;
+          outline: none;
+          margin-top: 5px;
+        }
+
+        input[type="password"] {
+          width: 100%;
+          height: 25px;
+          border: none;
+          border-radius: 10px;
+          background-color: #e8e8e8;
+          padding: 2px 10px;
+          outline: none;
+          margin-top: 5px;
+        }
+      }
+
+      .inq-content {
+        position: relative;
+        width: 100%;
+
+        textarea {
+          width: 100%;
+          height: 50px;
+          border: none;
+          border-radius: 10px;
+          background-color: #e8e8e8;
+          padding: 10px 10px;
+          margin-top: 5px;
+          resize: none;
+          outline: none;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding: 0;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+
+      button {
+        border: none;
+        border-radius: 10px;
+        width: 100%;
+        height: 30px;
+        background-color: $violet;
+        cursor: pointer;
+        margin: 15px;
+        color: white;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.selectsect-mdl-contain {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      background-color: $lightViolet;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin-top: 5px;
+      }
+
+      .con1 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        select {
+          margin: 20px;
+          width: 80%;
+          height: 40px;
+          border-radius: 10px;
+          outline: none;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding: 0;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 100%;
+
+      .footer-con1 {
+        width: 100%;
+        padding: 10px 10px 10px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 5px;
+
+        .btn-submit {
+          background-color: $violet;
+          border: none;
+          color: $white;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px 10px;
+          box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-submit:hover {
+          opacity: 0.8;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.displaysched-mdl-contain {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      background-color: $lightViolet;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      overflow: scroll;
+      padding: 5px;
+
+      p {
+        margin-top: 5px;
+      }
+
+      .con1 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        img {
+          width: auto;
+          height: 400px;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding: 0;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 100%;
+
+      .footer-con1 {
+        width: 100%;
+        padding: 10px 10px 10px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 5px;
+
+        .btn-submit {
+          background-color: $violet;
+          border: none;
+          color: $white;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px 10px;
+          box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-submit:hover {
+          opacity: 0.8;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+
+// ACCOUNT BALANCE PAYMENT METHOD
+.acb-selmd-mdl-contain {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      background-color: $lightViolet;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin-top: 5px;
+      }
+
+      .con1 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        row-gap: 10px;
+
+        h2 {
+          border-top: solid 2px $blueGreen;
+          border-bottom: solid 2px $blueGreen;
+        }
+
+        .paymtd-sel {
+          text-align: left;
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          row-gap: 5px;
+
+          select {
+            width: 100%;
+            padding: 5px 10px;
+            border-radius: 10px;
+          }
+        }
+
+        .paymtd-pay {
+          text-align: left;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding: 0;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 100%;
+
+      .footer-con1 {
+        width: 100%;
+        padding: 10px 10px 10px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 5px;
+
+        .btn-submit {
+          background-color: $violet;
+          border: none;
+          color: $white;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px 10px;
+          box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-submit:hover {
+          opacity: 0.8;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}
+
+// ACCOUNT BALANCE -- UPLOAD PAYMENT
+
+.acb-payamt-mdl-contain {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      background-color: $lightViolet;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin-top: 5px;
+      }
+
+      .con1 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+        .file-con {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          width: 100%;
+          height: auto;
+          margin-top: 10px;
+
+          .boxfile {
+            height: 70px;
+            width: 70px;
+            background-color: rgb(233, 233, 233);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0px 10px 10px;
+            border-radius: 10px;
+          }
+
+          .boxupfile {
+            height: 70px;
+            width: 70px;
+            background-color: rgb(233, 233, 233);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0px 10px 10px;
+            border-radius: 10px;
+            box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+
+            ion-icon {
+              font-size: 20px;
+            }
+          }
+
+          .boxupfile:hover {
+            background-color: rgb(204, 204, 204);
+          }
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+      padding: 0;
+      color: white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      width: 100%;
+
+      .footer-con1 {
+        width: 100%;
+        padding: 10px 10px 10px 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 5px;
+
+        .btn-submit {
+          background-color: $violet;
+          border: none;
+          color: $white;
+          border-radius: 10px;
+          cursor: pointer;
+          padding: 10px 10px;
+          box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-submit:hover {
+          opacity: 0.8;
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}

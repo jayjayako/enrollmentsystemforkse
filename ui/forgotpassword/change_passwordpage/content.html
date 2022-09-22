@@ -1,0 +1,67 @@
+<div class="allignall">
+  <div class="centeralign">
+    <div class="fgotpass-container">
+      <form id="loginform" onsubmit="return false">
+        <h2>
+          Change Password
+        </h2>
+
+        <div class="cngpass-container">
+          <div class="cngpass-header">
+            <h3>In order to protect your account, make sure your password:</h3>
+          </div>
+          <div class="cngpass-body">
+            <ul>
+              <li>Is not the same as your old password</li>
+              <li>
+                Does not match or significantly contain your<br />
+                email or username, e.g do not use 'username123'.
+              </li>
+              <li>has atleast 8 characters</li>
+              <li>has a mixture of letters and numbers</li>
+              <li>
+                Inclusion of atleast one special character, e.g..!<br />@ # ? |
+                Note: do not use &lt or &gt in your password,<br />
+                as both can cause problems in Web browsers.
+              </li>
+            </ul>
+
+            <span>New Password</span>
+            <input
+              id="newpassword"
+              type="password"
+              name="newpassword"
+              placeholder="Enter new password"
+              required
+            />
+            <span>Confirm Password</span>
+            <input
+              id="confirmpassword"
+              type="password"
+              name="confirmpassword"
+              placeholder="Confirm new password"
+              required
+            />
+          </div>
+          <div class="cngpass-footer">
+            <button
+            onclick="change_passwordpage('updatepassword')"
+            class="changepass-btn"
+            >
+              Change Password
+            </button>
+            <button
+              onclick="back()"
+              class="goback-btn"
+            >
+              Go Back
+            </button>
+          </div>
+          <div id="alertmsg"></div>
+        </div>
+
+      </form>
+      <br />
+    </div>
+  </div>
+</div>

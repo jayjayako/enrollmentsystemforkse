@@ -1,0 +1,81 @@
+<style>
+  /* ////////// first grid //////// */
+  .maingridpagetab2 {
+    display: grid;
+    background-color: transparent;
+    grid-template-rows: 13% auto;
+    gap: 0px;
+    padding: 0px;
+  }
+
+  .header1 {
+    grid-row: 1;
+  }
+  .header1 div {
+    padding: 20px;
+  }
+  .header1 div div {
+    position: relative;
+  }
+  .header1 div h3 {
+    margin-left: 50px;
+  }
+  .header1 div div {
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+  }
+  .header1 div div input {
+    margin-right: 40px;
+  }
+  .tab2content {
+    grid-row: 2;
+  }
+
+  .formborcon {
+    padding: 10px;
+    border: 1px solid var(--blueGreen);
+    border-radius: 10px;
+  }
+  /* /////////////////////////////// */
+  .padder {
+    padding: 10px;
+  }
+  .tab2tbl {
+    height: 75%;
+  }
+  .tab1btncontdes {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .tab1btndefaultdes {
+    position: absolute;
+    right: 10px;
+    width: 30%;
+  }
+</style>
+<div class="maingridpagetab2 fullwidth fullheight">
+  <div class="header1">
+    <div class="fullwidth flexcontent">
+      <label>Select School Level</label>
+      <select class="dropdowndes1" id="viewstudentreportschoollevelid" onchange="viewreportfunc('getyearlevel')"></select>
+      <label>Select Year Level</label>
+      <select class="dropdowndes1" id="viewstudentreportyearlevelid" onchange="viewreportfunc('getsection')"></select>
+      <label>Select Section</label>
+      <select class="dropdowndes1" id="viewstudentreportsectionid" onchange="viewreportfunc('viewenrolledstudents')"></select>
+    </div>
+  </div>
+
+  <div class="tab2content fullwidth fullheight">
+    <div class="outer2tbl1 tab2tbl">
+      <div class="outertbl1">
+        <table class="tbldes1" id="viewenrolledstudentreporttableid">
+        </table>
+      </div>
+    </div>
+    <div class="padder fullheight fullwidth tab1btncontdes">
+      <button class="btndes1 tab1btndefaultdes">PRINT</button>
+    </div>
+  </div>
+</div>

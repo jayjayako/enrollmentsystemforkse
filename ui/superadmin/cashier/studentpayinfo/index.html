@@ -1,0 +1,180 @@
+<style>
+  .stdntpayinfo {
+    width: 70%;
+    height: 530px;
+    margin-top: -50px;
+  }
+  .stdntpayinfodata {
+    border: none;
+    outline: none;
+  }
+  .stdntpayinfotitle {
+    font-weight: bold;
+  }
+  .padder {
+    padding: 10px;
+  }
+  .stdntpayinfobtndefault {
+    width: 33.33%;
+  }
+  .stdntpayinfobody {
+    margin-top: -30px;
+  }
+</style>
+<div class="modal-content2 stdntpayinfo">
+  <div class="modal-header2">
+    <span class="close2" onclick="closesecondmodal()">&times;</span>
+    <h3>Student Pay Information</h3>
+  </div>
+  <div class="modal-body2 stdntpayinfobody">
+    <div class="padder">
+      <div class="stdntpayinfotitle flexbox padder">
+        <div class="fullwidth">
+          <label>Personal Information</label>
+        </div>
+      </div>
+      <div class="flexbox padder">
+        <div class="fullwidth">
+          <label>Lastname</label>
+        </div>
+        <div class="fullwidth">
+          <input
+            placeholder="data"
+            class="stdntpayinfodata"
+            type="text"
+            id="infolastname"
+          />
+        </div>
+      </div>
+      <div class="flexbox padder">
+        <div class="fullwidth">
+          <label>Firstname</label>
+        </div>
+        <div class="fullwidth">
+          <input
+            placeholder="data"
+            class="stdntpayinfodata"
+            type="text"
+            id="infofirstname"
+          />
+        </div>
+      </div>
+      <div class="flexbox padder">
+        <div class="fullwidth">
+          <label>Birthdate</label>
+        </div>
+        <div class="fullwidth">
+          <input
+            placeholder="data"
+            class="stdntpayinfodata"
+            type="text"
+            id="infobirthdate"
+          />
+        </div>
+      </div>
+      <div class="flexbox padder">
+        <div class="fullwidth">
+          <label>Gender</label>
+        </div>
+        <div class="fullwidth">
+          <input
+            placeholder="data"
+            class="stdntpayinfodata"
+            type="text"
+            id="infogender"
+          />
+        </div>
+      </div>
+      <div class="flexbox padder">
+        <div class="fullwidth">
+          <label>Address</label>
+        </div>
+        <div class="fullwidth">
+          <input
+            placeholder="data"
+            class="stdntpayinfodata"
+            type="text"
+            id="infoaddress"
+          />
+        </div>
+      </div>
+      <div class="flexbox padder">
+        <div class="fullwidth">
+          <label>Contact Number</label>
+        </div>
+        <div class="fullwidth">
+          <input
+            placeholder="data"
+            class="stdntpayinfodata"
+            type="text"
+            id="infocontactno"
+          />
+        </div>
+      </div>
+      <div class="flexbox padder">
+        <div class="fullwidth">
+          <label>TOTAL AMOUNT</label>
+        </div>
+        <div class="fullwidth">
+          <input
+            placeholder="data"
+            class="stdntpayinfodata"
+            type="text"
+            id="displayalltotalpayments"
+          />
+        </div>
+      </div>
+      <div class="flexbox padder">
+        <div class="fullwidth">
+          <label>PAID</label>
+        </div>
+        <div class="fullwidth">
+          <input
+            placeholder="data"
+            class="stdntpayinfodata"
+            type="text"
+            id="paidamountid"
+          />
+        </div>
+      </div>
+      <div class="flexbox padder">
+        <div class="fullwidth">
+          <label>Payment Type</label>
+        </div>
+        <div class="fullwidth">
+          <input
+            placeholder="data"
+            class="stdntpayinfodata"
+            type="text"
+            id="displaypaymenttype"
+          />
+        </div>
+      </div>
+      <div class="flexbox padder">
+        <div class="fullwidth">
+          <label>Payment Method</label>
+        </div>
+        <div class="fullwidth">
+          <input
+            placeholder="data"
+            class="stdntpayinfodata"
+            type="text"
+            id="displaypaymentmethod"
+          />
+        </div>
+      </div>
+      <div class="flexbox padder">
+        <div class="padder stdntpayinfobtndefault">
+          <button class="btndes1" onclick="checkpayment(allpaymentglobalvar)">
+            APPROVE
+          </button>
+        </div>
+        <div class="padder stdntpayinfobtndefault">
+          <button class="btndes1" onclick="openmodal3paymentfile()">
+            VIEW FILE
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,174 @@
+<style>
+  .viewstudentblnce-modalcontent {
+    width: 70%;
+    margin-top: -40px;
+    height: 550px;
+  }
+  .padder {
+    padding: 10px;
+  }
+  .viewstudentblnceform {
+    background-color: rgb(221, 255, 221);
+  }
+  .verifypaymentprofilepic {
+    width: 130px;
+    height: 130px;
+    border: 1px solid var(--violet);
+    border-radius: 10px;
+  }
+
+  .verifypaymenttbl1 {
+    height: 30%;
+  }
+  .verifypaymentbtndefault {
+    width: 33.33%;
+  }
+  .margincont {
+    margin-top: -35px;
+  }
+  .viewbalanceoutputdes {
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+</style>
+<div class="modal-content1 viewstudentblnce-modalcontent">
+  <div class="modal-header1">
+    <span class="close1" onclick="closefirstmodal()">&times;</span>
+    <h3>View Student Balance</h3>
+  </div>
+  <div class="modal-body1">
+    <div class="padder margincont">
+      <div class="flexbox">
+        <div class="fullwidth padder">
+          <input
+            class="inputtextdes1 fullwidth"
+            type="text"
+            id="idfiltertabletextviewstudentbalance"
+          />
+        </div>
+        <div class="verifypaymentbtndefault">
+          <button class="btndes1" onclick="viewstudentbalancefunc('idfilter')">
+            Search
+          </button>
+        </div>
+      </div>
+      <div class="viewstudentblnceform flexbox">
+        <div class="padder">
+          <img
+            class="verifypaymentprofilepic"
+            src="../../img/defaultimg.png"
+            alt=""
+            id="viewstudentbalancepictureid"
+          />
+        </div>
+        <div class="padder fullwidth">
+          <div style="display: flex">
+            <p>Whole Name:&nbsp;</p>
+            <input
+              type="text"
+              placeholder="data"
+              readonly
+              class="viewbalanceoutputdes"
+              id="wholenamebalance"
+            />
+          </div>
+          <div style="display: flex">
+            <p>ID NUMBER:&nbsp;</p>
+            <input
+              type="text"
+              placeholder="data"
+              readonly
+              class="viewbalanceoutputdes"
+              id="idnumberbalance"
+            />
+          </div>
+          <div style="display: flex">
+            <p>Schoollevel:&nbsp;</p>
+            <input
+              type="text"
+              placeholder="data"
+              readonly
+              class="viewbalanceoutputdes"
+              id="schoolevelbalance"
+            />
+          </div>
+          <div style="display: flex">
+            <p>YearLevel:&nbsp;</p>
+            <input
+              type="text"
+              placeholder="data"
+              readonly
+              class="viewbalanceoutputdes"
+              id="yearlevelbalance"
+            />
+          </div>
+          <div style="display: flex">
+            <p>Payment Method:&nbsp;</p>
+            <input
+              type="text"
+              placeholder="data"
+              readonly
+              class="viewbalanceoutputdes"
+              id="paymenttypebalance"
+            />
+          </div>
+          <div style="display: flex">
+            <p>Total Balance:&nbsp;</p>
+            <input
+              type="text"
+              placeholder="data"
+              readonly
+              class="viewbalanceoutputdes"
+              id="totalbalancebalance"
+            />
+          </div>
+          <div style="display: flex">
+            <p>Paid:&nbsp;</p>
+            <input
+              type="text"
+              placeholder="data"
+              readonly
+              class="viewbalanceoutputdes"
+              id="paidamountbalance"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="fullwidth flexbox">
+        <div class="">
+          <h3>Filter</h3>
+        </div>
+        <div class="fullwidth padder">
+          <select
+            class="dropdowndes1"
+            onchange="viewstudentbalancefunc('displayyearlevel')"
+            id="viewstudentbalanceschoollevelid"
+          ></select>
+        </div>
+        <div class="fullwidth padder">
+          <select
+            class="dropdowndes1"
+            onchange="viewstudentbalancefunc('displaytable')"
+            id="viewstudentbalanceyearlevelid"
+          ></select>
+        </div>
+      </div>
+      <div class="outer2tbl1 verifypaymenttbl1">
+        <div class="outertbl1">
+          <table class="tbldes1" id="viewstudentbalancetableid"></table>
+        </div>
+      </div>
+      <div class="flexbox">
+        <div class="padder verifypaymentbtndefault">
+          <button class="btndes1" onclick="openmodal2payment()">Payment</button>
+        </div>
+        <div class="padder verifypaymentbtndefault">
+          <button class="btndes1" onclick="openmodal2sendmessage()">
+            Send Message
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

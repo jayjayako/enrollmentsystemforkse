@@ -1,0 +1,106 @@
+<style>
+  /* //////////// tab nav ///////// */
+  .tab {
+    overflow: hidden;
+    border: none;
+    background-color: #dcc9e9;
+    color: white;
+    margin-top: -25px;
+  }
+
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 12px;
+  }
+
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #f7eefd;
+    color: gray;
+  }
+
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: white;
+    color: green;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: none;
+    border-top: none;
+  }
+  /* ////////////////////////////// */
+  .edit-enrollee-records-modalwidth {
+    width: 70%;
+    margin-top: -80px;
+    height: 600px;
+    overflow: hidden;
+  }
+</style>
+<div class="modal-content1 edit-enrollee-records-modalwidth">
+  <div class="modal-header1">
+    <span class="close1" onclick="closefirstmodal()">&times;</span>
+    <h3>Edit Enrollee Records</h3>
+  </div>
+  <div class="modal-body1">
+    <!-- this is tab buttons -->
+    <div class="tab">
+      <button
+        id="firstclick"
+        class="tablinks"
+        onclick="tabfunction(event, 'tab1')"
+      >
+        New Student
+      </button>
+      <button class="tablinks" onclick="tabfunction(event, 'tab2')">
+        Old Student
+      </button>
+      <button class="tablinks" onclick="tabfunction(event, 'tab3')">
+        Transferee
+      </button>
+      <button class="tablinks" onclick="tabfunction(event, 'tab4')">
+        Foreigner
+      </button>
+      <button class="tablinks" onclick="tabfunction(event, 'tab5')">
+        Edit Student Files
+      </button>
+    </div>
+    <!-- /////////////////// -->
+    <!-- this is content tab -->
+    <div id="tab1" class="tabcontent">
+      <div import-html="editenrolleerecords/tab1.html"></div>
+    </div>
+    <!-- tab 2 -->
+    <div id="tab2" class="tabcontent">
+      <div import-html="editenrolleerecords/tab2.html"></div>
+    </div>
+    <!-- tab3 -->
+    <div id="tab3" class="tabcontent">
+      <div import-html="editenrolleerecords/tab3.html"></div>
+    </div>
+    <!-- //////////////////// -->
+    <!-- tab 4 -->
+    <div id="tab4" class="tabcontent">
+      <div import-html="editenrolleerecords/tab4.html"></div>
+    </div>
+    <!-- //////////////////// -->
+    <!-- tab 5 -->
+    <div id="tab5" class="tabcontent">
+      <div import-html="editenrolleerecords/tab5.html"></div>
+    </div>
+    <!-- //////////////////// -->
+  </div>
+</div>

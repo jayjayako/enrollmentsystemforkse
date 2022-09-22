@@ -1,0 +1,70 @@
+<style>
+  .imgclass {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    border: 1px solid var(--violet);
+  }
+  .tablclasspadding {
+    padding: 10px;
+  }
+  .tablclasspadding div input {
+    outline: none;
+    border: none;
+  }
+  .outer2tbl1 {
+    height: 22%;
+  }
+  .btnpadding {
+    padding: 10px;
+  }
+</style>
+<div class="fullwidth flexbox tablclasspadding">
+  <div class="fullwidth fullheight">
+    <img
+      class="imgclass"
+      src="../../img/defaultimg.png"
+      id="transfereestudentpictureid"
+    />
+  </div>
+  <div class="fullwidth fullheight">
+    <input
+      type="text"
+      value="Whole Name"
+      readonly
+      id="transfereestudentwholename"
+    />
+  </div>
+</div>
+<p>Student Table</p>
+<div class="outer2tbl1">
+  <div class="outertbl1">
+    <table class="tbldes1" id="transfereestudentresult1"></table>
+  </div>
+</div>
+<p>Student Files</p>
+<div class="outer2tbl1">
+  <div class="outertbl1">
+    <table class="tbldes1" id="transfereestudentresult2"></table>
+  </div>
+</div>
+<div class="fullwidth flexbox">
+  <div class="fullwidth btnpadding">
+    <button class="btndes1" onclick="openmodal2studentpersonalinfo()">
+      VIEW INFORMATION
+    </button>
+  </div>
+  <div class="fullwidth btnpadding">
+    <button
+      class="btndes1"
+      onclick="editenrolleerecordstransfereestudent('approvestudent')"
+    >
+      APPROVE
+    </button>
+  </div>
+  <div class="fullwidth btnpadding">
+    <button class="btndes1" onclick="openmodal2viewadmitfile()">
+      VIEW FILE
+    </button>
+  </div>
+</div>

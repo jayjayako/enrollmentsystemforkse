@@ -1,0 +1,92 @@
+<style>
+  .enrollment_reserve-modalwidth {
+    width: 70%;
+    margin-top: -50px;
+    height: 90%;
+    overflow: hidden;
+  }
+  .enrollreserveformborder {
+    border: 1px solid var(--blueGreen);
+    border-radius: 10px;
+  }
+  .imgclass {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    border: 1px solid var(--violet);
+  }
+  .enrollreserveformborder div div input {
+    outline: none;
+    border: none;
+  }
+  .enrollreserveformborder div {
+    padding: 10px;
+  }
+  .enrollreservetbl {
+    margin-top: 10px;
+    height: 200px;
+  }
+  .btnpadding {
+    padding: 10px;
+  }
+</style>
+<div class="modal-content1 enrollment_reserve-modalwidth">
+  <div class="modal-header1">
+    <span class="close1" onclick="closefirstmodal()">&times;</span>
+    <h3>Enrollment Reservation</h3>
+  </div>
+  <div class="modal-body1">
+    <div class="fullwidth enrollreserveformborder">
+      <div class="fullwidth flexbox">
+        <div class="fullwidth">
+          <img
+            class="imgclass"
+            src="../../img/defaultimg.png"
+            id="enrollmentreservationpictureid"
+          />
+        </div>
+        <div class="fullwidth">
+          <input
+            type="text"
+            value="wholename"
+            id="enrollmentreservationnameid"
+            readonly
+          />
+        </div>
+      </div>
+    </div>
+    <div class="outer2tbl1 enrollreservetbl">
+      <div class="outertbl1">
+        <table class="tbldes1" id="enrollmentreservationtableid"></table>
+      </div>
+    </div>
+    <div class="fullwidth flexbox">
+      <div class="fullwidth btnpadding">
+        <button class="btndes1" onclick="openmodal2viewmessage()">
+          VIEW MESSAGE
+        </button>
+      </div>
+      <div class="fullwidth btnpadding">
+        <button
+          class="btndes1"
+          onclick="enrollmentreservationfunction('approvereserve')"
+        >
+          APPROVE
+        </button>
+      </div>
+      <div class="fullwidth btnpadding">
+        <button class="btndes1" onclick="openmodal2sendmessage()">
+          SEND MESSAGE
+        </button>
+      </div>
+      <div class="fullwidth btnpadding">
+        <button
+          class="btndes1"
+          onclick="enrollmentreservationfunction('deletereserve')"
+        >
+          DELETE MESSAGE
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

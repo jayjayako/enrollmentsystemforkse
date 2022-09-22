@@ -1,0 +1,167 @@
+<style>
+  /* ////////// first grid //////// */
+  .maingridpagetab1 {
+    display: grid;
+    background-color: transparent;
+    grid-template-rows: 13% 38% auto;
+    gap: 0px;
+    padding: 0px;
+  }
+
+  .header1 {
+    grid-row: 1;
+  }
+  .header1 div {
+    padding: 20px;
+  }
+  .header1 div div {
+    position: relative;
+  }
+  .header1 div h3 {
+    margin-left: 50px;
+  }
+  .header1 div div {
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+  }
+  .header1 div div input {
+    margin-right: 40px;
+  }
+  .tab2content {
+    grid-row: 2;
+  }
+
+  .formborcon {
+    padding: 10px;
+    border: 1px solid var(--blueGreen);
+    border-radius: 10px;
+  }
+  .tab2content2 {
+    grid-row: 3;
+  }
+  /* /////////////////////////////// */
+  /* ////////// second grid //////// */
+  .maingridpagetab2 {
+    display: grid;
+    background-color: transparent;
+    grid-template-columns: 50% auto;
+    gap: 10px;
+    padding: 10px;
+  }
+  .tab2contentinnerform1 {
+    grid-column: 1;
+  }
+  .tab2contentinnerform2 {
+    grid-column: 2;
+  }
+  .tab2contentinnerform2 img {
+    width: 70%;
+    height: 100%;
+    margin: 0px;
+    border-radius: 10px;
+  }
+  .tab2contentinnerform1 div {
+    padding: 10px;
+  }
+  .tab2contentinnerform1 div input {
+    margin-left: 20%;
+    outline: none;
+    border: none;
+  }
+  .formlbl {
+    position: fixed;
+    background-color: var(--blueGreen);
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    width: fit-content;
+    block-size: fit-content;
+    margin-top: -210px;
+  }
+  /* /////////////////////////////// */
+</style>
+<div class="maingridpagetab1 fullwidth fullheight">
+  <div class="header1">
+    <div class="fullwidth flexcontent">
+      <h3>Select User Type</h3>
+      <div>
+        <label>Super Admin</label>
+        <input
+          type="radio"
+          name="userrbtn"
+          onclick="audittrailfunct('displaysuperadminactivitylog')"
+          checked="checked"
+        />
+        <label>Admin</label>
+        <input
+          type="radio"
+          name="userrbtn"
+          onclick="audittrailfunct('displayadminactivitylog')"
+        />
+        <label>Staff</label>
+        <input
+          type="radio"
+          name="userrbtn"
+          onclick="audittrailfunct('displaystaffactivitylog')"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="tab2content fullwidth fullheight">
+    <div class="fullwidth flexcontent formborcon">
+      <div class="maingridpagetab2 fullwidth flexbox">
+        <label class="formlbl">User Information</label>
+        <div class="tab2contentinnerform1 fullwidth">
+          <div class="fullwidth flexcontent">
+            <label>ID Number:</label>
+            <input type="text" readonly id="userinfoactivitylogid" />
+          </div>
+          <div class="fullwidth flexcontent">
+            <label>User Type:</label>
+            <input type="text" readonly id="userinfoactivitylogusertype" />
+          </div>
+          <div class="fullwidth flexcontent">
+            <label>Firstname:</label>
+            <input type="text" readonly id="userinfoactivitylogfirstname" />
+          </div>
+          <div class="fullwidth flexcontent">
+            <label>Lastname:</label>
+            <input type="text" readonly id="userinfoactivityloglastname" />
+          </div>
+        </div>
+        <div class="tab2contentinnerform2">
+          <img src="../../img/defaultimg.png" id="activitylogprofilepicid" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tab2content2 fullwidth fullheight">
+    <div class="outer2tbl1">
+      <div class="outertbl1">
+        <table class="tbldes1" id="activitylog">
+          <tr>
+            <th>
+              <div>title</div>
+            </th>
+            <th>
+              <div>title</div>
+            </th>
+            <th>
+              <div>title</div>
+            </th>
+            <th>
+              <div>title</div>
+            </th>
+          </tr>
+          <tr>
+            <td><div>data</div></td>
+            <td><div>data</div></td>
+            <td><div>data</div></td>
+            <td><div>data</div></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

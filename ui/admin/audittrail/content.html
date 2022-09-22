@@ -1,0 +1,199 @@
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-template-rows: 10% 1fr;
+    gap: 0px;
+    padding: 0px;
+  }
+  /* ////////////// side nav /////////// */
+  .item1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+  .sidenavdes {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: var(--lightBlue);
+  }
+  /* /////////////////////////////////// */
+  /* ////////////// first header /////// */
+  .firstheader {
+    grid-column: 2;
+    grid-row: 1;
+    gap: 5px;
+    padding: 5px;
+  }
+  .innerfirstheader {
+    position: relative;
+  }
+  .innerfirstheader div > h3 {
+    position: absolute;
+    top: 5;
+    left: 5;
+  }
+  .profilepicanddrpdwn {
+    position: absolute;
+    right: 0;
+    width: 100px;
+  }
+  .profilepic {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-left: -50px;
+    margin-right: 20px;
+  }
+  .notifbtndes {
+    border-radius: 100%;
+    outline: none;
+    border: none;
+    margin-right: 10px;
+    background-color: transparent;
+  }
+  .notifbtndes ion-icon {
+    font-size: 23px;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    padding-right: 110px;
+  }
+  .dropdown-menu a {
+    text-align: left;
+    width: 100px;
+  }
+  /* ////////////////////////////////// */
+  /* ///////////// tab design //////// */
+  .item2 {
+    grid-column: 2;
+    grid-row: 2;
+    gap: 5px;
+    padding: 5px;
+  }
+  /* ///////////////////////////////// */
+  /* //////////// tab nav ///////// */
+  .tab {
+    overflow: hidden;
+    border: none;
+    background-color: #dcc9e9;
+    color: white;
+    margin-top: 10px;
+  }
+
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 12px;
+  }
+
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #f7eefd;
+    color: gray;
+  }
+
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: white;
+    color: green;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: none;
+    border-top: none;
+  }
+  /* ////////////////////////////// */
+  .notifposition {
+    width: 50%;
+    margin-left: -20px;
+    margin-top: 20px;
+    z-index: 0;
+    cursor: pointer;
+  }
+</style>
+<div import-html="modals.html"></div>
+<div class="grid-container fullheight">
+  <div class="firstheader">
+    <div class="innerfirstheader">
+      <div class=""><h3>Audit Trail</h3></div>
+      <div class="profilepicanddrpdwn flexbox">
+        <img
+          class="profilepic"
+          src="../../img/defaultimg.png"
+          id="profilepicid"
+        />
+        <button class="notifbtndes">
+          <ion-icon
+            name="notifications-outline"
+            onclick="openmodalnotifications()"
+          ></ion-icon>
+        </button>
+        <span
+          class="notifdot flexbox notifposition"
+          onclick="openmodalnotifications()"
+        >
+          5
+        </span>
+        <div class="dropdowndes2 fullwidth" data-dropdown>
+          <button class="dropdown-link btnnavdropdown" data-dropdown-button>
+            <ion-icon
+              name="caret-down-outline"
+              size="small"
+              data-dropdown-button
+            ></ion-icon>
+          </button>
+          <div class="dropdown-menu">
+            <a onclick="gotoprofile()">
+              <ion-icon name="person-outline"></ion-icon>
+              Profile</a
+            >
+            <a onclick="audittrailfunct('logout')">
+              <ion-icon name="power-outline"></ion-icon>
+              Logout</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="item1">
+    <div import-html="sidenavbar.html" class="sidenavdes"></div>
+  </div>
+  <div class="item2">
+    <!-- this is tab buttons -->
+    <div class="tab">
+      <button
+        id="firstclick"
+        class="tablinks"
+        onclick="tabfunction(event, 'tab1')"
+      >
+        Activity Log
+      </button>
+      <button class="tablinks" onclick="tabfunction(event, 'tab2')">
+        Log History
+      </button>
+    </div>
+    <!-- /////////////////// -->
+    <!-- this is content tab -->
+    <div id="tab1" class="tabcontent">
+      <div import-html="tabscontent/tab1.html"></div>
+    </div>
+    <!-- tab 2 -->
+    <div id="tab2" class="tabcontent">
+      <div import-html="tabscontent/tab2.html"></div>
+    </div>
+  </div>
+</div>

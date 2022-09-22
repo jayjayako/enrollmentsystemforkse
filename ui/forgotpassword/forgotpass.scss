@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Barlow", sans-serif;
+}
+
+*::before *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: url("../../img/login_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+}
+
+.allignall {
+  height: 100hv;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  float: right;
+  margin-right: 15%;
+
+  .centeralign {
+    width: 100%;
+    margin-top: 28%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    align-items: center;
+
+    .fgotpass-container {
+      font-family: "Barlow", sans-serif;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      #loginattempts {
+        color: #57cbb4;
+        font-weight: bold;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+
+        img {
+          margin: auto;
+          width: 165px;
+          height: 125px;
+        }
+
+        .fgotpass-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .bck-fpass {
+            cursor: pointer;
+
+            ion-icon {
+              height: 30px;
+              width: 30px;
+              color: rgb(136, 136, 136);
+              transition: 0.5s;
+            }
+
+            ion-icon:hover {
+              color: rgb(92, 92, 92);
+            }
+          }
+
+          h2 {
+            color: rgb(82, 82, 82);
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+
+        .fgotpass-body {
+          display: flex;
+          flex-direction: column;
+          row-gap: 5px;
+
+          p {
+            text-align: left;
+          }
+
+          input[type="text"] {
+            width: auto;
+            padding: 10px 15px;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid rgb(92, 92, 92);
+            transition: 0.5s;
+          }
+
+          input[type="text"]:focus {
+            border: 1px solid #57cbb4;
+          }
+
+          button {
+            display: flex;
+            width: 350px;
+            flex-direction: row;
+            justify-content: center;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: none;
+            transition: 0.5s;
+            cursor: pointer;
+            background-color: #833db0;
+            color: white;
+            box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+
+            p {
+              margin-left: auto;
+              margin-right: auto;
+            }
+          }
+
+          button:hover {
+            opacity: 0.9;
+          }
+        }
+
+        .verfpass-container {
+          display: flex;
+          flex-direction: column;
+          row-gap: 5px;
+
+          p {
+            width: 350px;
+          }
+
+          input[type="text"] {
+            width: auto;
+            padding: 10px 15px;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid rgb(92, 92, 92);
+            transition: 0.5s;
+          }
+
+          input[type="text"]:focus {
+            border: 1px solid #57cbb4;
+          }
+
+          .btn-container {
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+
+            button {
+              border-radius: 5px;
+              padding: 10px 15px;
+              cursor: pointer;
+              transition: 0.5s;
+            }
+
+            .verfcon-btn {
+              background-color: #833db0;
+              border: none;
+              color: white;
+              box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+            }
+
+            .verfcon-btn:hover {
+              opacity: 0.9;
+            }
+
+            .bck-btn {
+              border: 1px solid #57cbb4;
+              background-color: transparent;
+              color: #57cbb4;
+            }
+
+            .bck-btn:hover {
+              background-color: #d8f5ef;
+            }
+          }
+
+          .resend-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            #counter {
+              color: #57cbb4;
+              font-weight: 700;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .cngpass-container {
+          display: flex;
+          flex-direction: column;
+          row-gap: 5px;
+
+          .cngpass-header {
+            color: rgb(110, 110, 110);
+            width: 350px;
+          }
+
+          .cngpass-body {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+
+            ul {
+              list-style: disc;
+              margin-left: 30px;
+            }
+
+            input[type="password"] {
+              width: auto;
+              padding: 10px 15px;
+              border-radius: 5px;
+              outline: none;
+              border: 1px solid rgb(92, 92, 92);
+              transition: 0.5s;
+            }
+
+            input[type="password"]:focus {
+              border: 1px solid #57cbb4;
+            }
+          }
+
+          .cngpass-footer {
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+
+            button {
+              border-radius: 5px;
+              padding: 10px 15px;
+              cursor: pointer;
+              transition: 0.5s;
+            }
+
+            .changepass-btn {
+              background-color: #833db0;
+              border: none;
+              color: white;
+              box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+            }
+
+            .changepass-btn:hover {
+              opacity: 0.9;
+            }
+
+            .goback-btn {
+              background-color: transparent;
+              border: 1px solid #57cbb4;
+              color: #57cbb4;
+            }
+          }
+        }
+
+        .succpass-container {
+          background-color: #e3f6dc;
+          border-radius: 5px;
+          padding: 10px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+
+          h2 {
+            width: 250px;
+            text-align: center;
+            margin: auto;
+          }
+
+          .succpass-body {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+
+            button {
+              border-radius: 5px;
+              padding: 10px 15px;
+              cursor: pointer;
+              transition: 0.5s;
+              background-color: #833db0;
+              border: none;
+              color: white;
+              box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+            }
+
+            button:hover {
+              opacity: 0.9;
+            }
+          }
+        }
+      }
+
+      &-logform {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        row-gap: 5px;
+
+        input[type="text"] {
+          padding: 10px 15px;
+          border-radius: 5px;
+          outline: none;
+          border: 1px solid #525252;
+          transition: 0.5s;
+        }
+
+        input[type="text"]:focus {
+          border: 1px solid #57cbb4;
+        }
+
+        input[type="password"] {
+          padding: 10px 15px;
+          border-radius: 5px;
+          outline: none;
+          border: 1px solid #525252;
+          transition: 0.5s;
+        }
+
+        input[type="password"]:focus {
+          border: 1px solid #57cbb4;
+        }
+      }
+
+      .fgotpass-container {
+        display: flex;
+        justify-content: right;
+
+        .fgotpass-txt {
+          cursor: pointer;
+        }
+      }
+
+      .logbtn-container {
+        button {
+          border-radius: 5px;
+          border: none;
+          width: 100%;
+          background-color: #525252;
+          color: white;
+          padding: 10px 15px;
+          cursor: pointer;
+          transition: 0.5s;
+          box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+          opacity: 0.9;
+        }
+      }
+
+      .clrbtn-container {
+        button {
+          border-radius: 5px;
+          border: 1px solid #833db0;
+          background-color: transparent;
+          color: #833db0;
+          padding: 10px 15px;
+          cursor: pointer;
+          width: 350px;
+          transition: 0.5s;
+        }
+
+        button:hover {
+          background-color: #dab6f0;
+        }
+      }
+
+      .log-admin {
+        cursor: pointer;
+        color: rgb(126, 126, 126);
+        margin: 10px;
+        transition: 0.5s;
+      }
+
+      .log-admin:hover {
+        color: rgb(87, 87, 87);
+      }
+    }
+  }
+}
