@@ -5,7 +5,7 @@ const router = express.Router();
 ////////////////////////////////////////////////////////
 
 var db = require("../../modulelibrary/databaseconn");
-const { decypherthecookie } = require("../../modulelibrary/encryption");
+// const { decypherthecookie } = require("../../modulelibrary/encryption");
 const { generateid } = require("../../modulelibrary/idgenerator");
 //////////////////// activity log ///////////////////
 const { activitylog } = require("../../modulelibrary/activitylog");

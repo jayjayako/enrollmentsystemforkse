@@ -38,7 +38,3 @@ socketfunct(io);
 
 app.use(express.static("ui"));
 app.use("/ui", express.static(__dirname + "ui"));
-
-// app.get("/website", (req, res) => {
-//   res.sendFile(path.join(__dirname, "ui/index.html"));
-// });
