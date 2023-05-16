@@ -1,0 +1,19 @@
+@use "../widgets";
+@use "../../util";
+
+.reportsgrid {
+  @include widgets.griddesign(1fr, 5% auto);
+  .maingridcont {
+    background-color: transparent;
+  }
+  .item1 {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: util.$white;
+    border-bottom: 1px solid util.$blueGreen;
+  }
+  .item2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}

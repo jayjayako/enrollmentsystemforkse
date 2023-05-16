@@ -1,0 +1,39 @@
+<div id="content2" class="fullheight fullwidth content2grid">
+  <div class="fullwidth fullheight flexbox maingridcont item1"></div>
+  <div class="fullwidth fullheight maingridcont item2">
+    <h3>User Info</h3>
+    <div class="fullwidth innerstrip2"></div>
+  </div>
+  <div class="fullwidth fullheight flexbox maingridcont item3">
+    <div class="fullwidth fullheight" style="position: relative; padding: 10px">
+      <img
+        onclick="goback()"
+        src="./img/undo.svg"
+        style="position: absolute; right: 8%" />
+      <img
+        onclick="
+        openmodal('1ststackmodalid','app/components/modalcontent/editprofile.html')
+      "
+        src="./img/edit.svg"
+        style="position: absolute; right: 1.5%" />
+    </div>
+  </div>
+  <div class="fullwidth fullheight flexbox flexdirec-col maingridcont item4">
+    <div class="fullwidth flexbox">
+      <p class="fullwidth" style="width: 65%">Username: ${username}</p>
+      <p class="fullwidth">Password: ${password}</p>
+    </div>
+    <div class="fullwidth flexbox">
+      <p class="fullwidth" style="width: 65%">Lastname: ${lastname}</p>
+      <p class="fullwidth">Firstname: ${firstname}</p>
+    </div>
+    <div class="fullwidth flexbox">
+      <p class="fullwidth" style="width: 65%">Birthdate: ${birthdate}</p>
+      <p class="fullwidth">Phone: ${phone}</p>
+    </div>
+    <div class="fullwidth flexbox">
+      <p class="fullwidth" style="width: 65%">Email: ${email}</p>
+      <p class="fullwidth">Address: ${address}</p>
+    </div>
+  </div>
+</div>

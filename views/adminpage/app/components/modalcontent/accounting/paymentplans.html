@@ -1,0 +1,100 @@
+<div class="fullwidth fullheight flexbox paymentplansgrid">
+  <div class="modal-content modalpaymentplans">
+    <div class="modal-header">
+      <span
+        class="close"
+        onclick="
+      closemodal('1ststackmodalid')
+      "
+        >&times;</span
+      >
+      <h3>Payment Plans</h3>
+    </div>
+    <div class="modal-body fullwidth">
+      <fieldset class="fullwidth fullheight">
+        <div style="padding: 10px">
+          <div class="fullwidth flexbox flexdirec-row">
+            <div
+              class="fullwidth flexbox flexdirec-col"
+              style="padding: 5px; width: 33%">
+              <label>School Level</label>
+              <select class="dropdowndes1"></select>
+            </div>
+            <div
+              class="fullwidth flexbox flexdirec-col"
+              style="padding: 5px; width: 33%">
+              <label>Year Level</label>
+              <select class="dropdowndes1"></select>
+            </div>
+          </div>
+          <div class="fullwidth flexbox flexdirec-row">
+            <div
+              class="fullwidth flexbox flexdirec-col"
+              style="padding: 5px; width: 33%">
+              <label>Payment Type</label>
+              <input class="inputtextdes3" type="text" />
+            </div>
+            <div
+              class="fullwidth flexbox flexdirec-col"
+              style="padding: 5px; width: 33%">
+              <label>Particular</label>
+              <input class="inputtextdes3" type="text" />
+            </div>
+          </div>
+          <div class="fullwidth flexbox flexdirec-row">
+            <div
+              class="fullwidth flexbox flexdirec-col"
+              style="padding: 5px; width: 33%">
+              <label>Year</label>
+              <input class="inputtextdes3" type="text" />
+            </div>
+            <div
+              class="fullwidth flexbox flexdirec-col"
+              style="padding: 5px; width: 33%">
+              <label>Month</label>
+              <select class="dropdowndes1"></select>
+            </div>
+          </div>
+          <div class="fullwidth flexbox flexdirec-row">
+            <div
+              class="fullwidth flexbox flexdirec-col"
+              style="padding: 5px; width: 33%">
+              <label>Day</label>
+              <select class="dropdowndes1"></select>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <div class="fullwidth fullheight flexbox flexdirec-row">
+        <div class="fullwidth" style="padding: 10px">
+          <button class="btndes4">ADD</button>
+        </div>
+        <div class="fullwidth" style="padding: 10px">
+          <button class="btndes4">UPDATE</button>
+        </div>
+        <div class="fullwidth" style="padding: 10px">
+          <button class="btndes4">DELETE</button>
+        </div>
+      </div>
+      <div class="fullwidth fullheight flexbox flexdirec-row">
+        <label>Filter</label>
+        <div class="fullwidth" style="padding: 10px">
+          <select class="dropdowndes1"></select>
+        </div>
+        <div class="fullwidth" style="padding: 10px">
+          <select class="dropdowndes1"></select>
+        </div>
+      </div>
+      <div
+        HTMLINCLUDE="accountingpaymentplanstable"
+        class="fullwidth fullheight"
+        style="padding-top: 10px; height: 195px"></div>
+    </div>
+  </div>
+</div>
+<script>
+  includehtml(
+    "accountingpaymentplanstable",
+    "app/components/modalcontent/accounting/table.html"
+  );
+</script>

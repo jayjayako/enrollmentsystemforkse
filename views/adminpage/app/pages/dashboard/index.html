@@ -1,0 +1,16 @@
+<div class="fullwidth fullheight dashboardgrid">
+  <div
+    HTMLINCLUDE="dashboardheader"
+    class="fullwidth fullheight maingridcont item1"></div>
+  <div
+    HTMLINCLUDE="activity"
+    class="fullwidth fullheight maingridcont item2"></div>
+  <div
+    HTMLINCLUDE="rightnavbar"
+    class="fullwidth fullheight maingridcont item3"></div>
+</div>
+<script>
+  includehtml("dashboardheader", "app/pages/dashboard/header.html");
+  includehtml("activity", "app/pages/dashboard/activity.html");
+  includehtml("rightnavbar", "app/pages/dashboard/rightnavbar.html");
+</script>

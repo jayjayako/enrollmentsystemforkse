@@ -1,0 +1,77 @@
+<div class="fullwidth fullheight managestudentgrid">
+  <div class="fullwidth fullheight flexbox flexdirec-row maingridcont item1">
+    <div class="fullwidth flexbox">
+      <h3>Select School Level</h3>
+    </div>
+    <div class="fullwidth flexbox">
+      <select class="dropdowndes1" style="width: 43%"></select>
+    </div>
+  </div>
+  <div
+    class="fullwidth fullheight flexbox flexdirec-col maingridcont item2"
+    style="padding: 5px">
+    <fieldset
+      class="fullwidth fullheight flexbox flexdirec-row"
+      style="border-radius: 10px; padding-bottom: 20px; padding-top: 10px">
+      <legend style="border-radius: 10px; padding: 5px; margin-left: 10px">
+        USER INFORMATION
+      </legend>
+      <div class="fullwidth flexbox flexdirec-col">
+        <p class="fullwidth" style="text-align: left; padding: 5px">
+          ID Number:
+        </p>
+        <p class="fullwidth" style="text-align: left; padding: 5px">
+          Firstname:
+        </p>
+        <p class="fullwidth" style="text-align: left; padding: 5px">
+          Lastname:
+        </p>
+        <p class="fullwidth" style="text-align: left; padding: 5px">
+          School Level:
+        </p>
+        <p class="fullwidth" style="text-align: left; padding: 5px">
+          Year Level:
+        </p>
+        <p class="fullwidth" style="text-align: left; padding: 5px">Section:</p>
+      </div>
+      <div class="fullwidth"></div>
+      <div class="fullheight fullwidth flexbox">
+        <img
+          class="fullwidth"
+          src="./img/defaultimg.png"
+          style="border-radius: 10px; height: 170px; width: 170px" />
+      </div>
+    </fieldset>
+    <div class="fullwidth fullheight flexbox flexdirec-row" style="height: 20%">
+      <div class="fullwidth" style="padding-right: 5px">
+        <button
+          onclick="
+          openmodal('1ststackmodalid','app/components/modalcontent/managestudent/studentpersonalinfo.html')
+        "
+          class="btndes4">
+          VIEW ALL DETAILS
+        </button>
+      </div>
+      <div class="fullwidth" style="padding-left: 5px; padding-right: 5px">
+        <button
+          onclick="
+          openmodal('1ststackmodalid','app/components/modalcontent/managestudent/restorestudent.html')
+        "
+          class="btndes4">
+          RESTORE
+        </button>
+      </div>
+      <div class="fullwidth" style="padding-left: 5px">
+        <button class="btndes4">DELETE</button>
+      </div>
+    </div>
+  </div>
+  <div
+    HTMLINCLUDE="managestudenttable"
+    class="fullwidth fullheight maingridcont item3"
+    style="padding: 5px; height: 220px"></div>
+</div>
+
+<script>
+  includehtml("managestudenttable", "app/pages/managestudent/table.html");
+</script>

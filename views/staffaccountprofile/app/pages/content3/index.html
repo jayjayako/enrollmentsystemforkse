@@ -1,0 +1,25 @@
+<div class="fullheight fullwidth content3grid">
+  <div class="fullwidth fullheight flexbox maingridcont item1"></div>
+  <div class="fullwidth fullheight maingridcont item2">
+    <h3>Activities</h3>
+    <div class="fullwidth innerstrip2"></div>
+  </div>
+  <div class="fullwidth fullheight maingridcont item3">
+    <table id="content3table1_cont" class="fullwidth tbldes1">
+      <tr style="border-bottom: 2px solid purple">
+        <th>User Type</th>
+        <th>Lastname</th>
+        <th>Activities</th>
+        <th>Time</th>
+      </tr>
+      <template id="content3table1_template">
+        <tr>
+          <td>${results[i].id}</td>
+          <td>${results[i].lastname}</td>
+          <td>${results[i].activity_log.activities}</td>
+          <td>${results[i].activity_log.time}</td>
+        </tr>
+      </template>
+    </table>
+  </div>
+</div>

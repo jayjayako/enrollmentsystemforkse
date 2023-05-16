@@ -1,0 +1,19 @@
+@use "../widgets";
+.gridmainpage {
+  @include widgets.griddesign(25.4% auto, 11% auto);
+  .maingridcont {
+    background-color: transparent;
+  }
+  .leftnavbargrid {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+  .mainheadergrid {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .mainpagegrid {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}

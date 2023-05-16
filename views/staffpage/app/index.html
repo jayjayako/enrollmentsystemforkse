@@ -1,0 +1,19 @@
+<div HTMLINCLUDE="modalsid"></div>
+<div class="fullwidth fullheight gridmainpage">
+  <div
+    HTMLINCLUDE="leftnavbarid"
+    class="fullwidth fullheight maingridcont leftnavbargrid"></div>
+  <div
+    HTMLINCLUDE="header"
+    class="fullwidth fullheight maingridcont mainheadergrid"></div>
+  <div
+    HTMLINCLUDE="mainpage"
+    class="fullwidth fullheight maingridcont mainpagegrid"></div>
+</div>
+
+<script>
+  includehtml("leftnavbarid", "app/components/leftnavbar.html");
+  includehtml("header", "app/components/header.html");
+  includehtml("mainpage", "app/pages");
+  includehtml("modalsid", "app/components/modallist");
+</script>

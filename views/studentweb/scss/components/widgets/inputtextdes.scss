@@ -1,0 +1,54 @@
+@use "../../util";
+@mixin inputtextdesign($number) {
+  width: 100%;
+  font-family: util.$font1;
+  transition: 0.5s;
+  font-weight: bold;
+  @if $number==1 {
+    padding: 9px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid util.$black;
+
+    &:focus {
+      border: 1px solid util.$blueGreen;
+    }
+  } @else if $number==2 {
+    padding: 8px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+
+    &:focus {
+      outline: none;
+      background-color: rgb(230, 220, 220);
+    }
+  } @else if $number==3 {
+    padding: 8px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: none;
+    transition: 0.5s;
+    background-color: rgb(221, 221, 221);
+
+    &:focus {
+      outline: none;
+      background-color: rgb(230, 220, 220);
+    }
+  }
+}
+
+.inputtextdes1 {
+  @include inputtextdesign(1);
+}
+
+.inputtextdes2 {
+  @include inputtextdesign(2);
+}
+
+.inputtextdes3 {
+  @include inputtextdesign(3);
+}

@@ -1,0 +1,34 @@
+<div HTMLINCLUDE="modalsid"></div>
+<!-- ////////////// dropdown ////////////// -->
+<div
+  onclick="showdropdownnav()"
+  id="dropdownnavconid"
+  class="fullwidth fullheight dropdownnavcon"
+  style="position: absolute">
+  <div
+    onclick="location.replace('../loginpage')"
+    class="dropdownnavinner flexbox flexdirec-row"
+    style="border-radius: 5px">
+    <ion-icon name="log-out-outline"></ion-icon>
+    <p>Logout</p>
+  </div>
+</div>
+<!-- ////////////////////////////////////// -->
+<div class="fullwidth fullheight gridmainpage">
+  <div
+    HTMLINCLUDE="leftnavbarid"
+    class="fullwidth fullheight maingridcont leftnavbargrid"></div>
+  <div
+    HTMLINCLUDE="mainheaderid"
+    class="fullwidth fullheight maingridcont mainheadergrid"></div>
+  <div
+    HTMLINCLUDE="maincontentid"
+    class="fullwidth fullheight maingridcont mainpagegrid"></div>
+</div>
+
+<script>
+  includehtml("leftnavbarid", "app/components/leftnavbar.html");
+  includehtml("mainheaderid", "app/components/mainheader.html");
+  includehtml("maincontentid", "app/pages");
+  includehtml("modalsid", "app/components/modallist");
+</script>

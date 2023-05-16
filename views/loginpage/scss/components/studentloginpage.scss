@@ -1,0 +1,67 @@
+@use "../util";
+.studentloginpage {
+  background: url("../img/loginbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  h3 {
+    font-family: util.$font1;
+    color: util.$white;
+  }
+  p {
+    font-family: util.$font1;
+    color: util.$white;
+  }
+  button {
+    font-family: util.$font1;
+    color: util.$white;
+  }
+  .imgcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: util.$white;
+    margin-right: 10px;
+  }
+}
+
+.studentforgotpasspage {
+  background-color: util.$violet;
+  h2,
+  h3 {
+    color: util.$white;
+    font-family: util.$font1;
+  }
+  p {
+    color: util.$white;
+    font-family: util.$font1;
+  }
+  button {
+    color: util.$white;
+    font-family: util.$font1;
+  }
+  li {
+    color: util.$white;
+  }
+  label {
+    color: util.$white;
+  }
+}
+
+.studentregisterpage {
+  background: url("../img/registerbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  font-family: util.$font1;
+
+  h3 {
+    color: util.$white;
+  }
+  label {
+    color: util.$white;
+  }
+  p {
+    color: util.$white;
+  }
+}

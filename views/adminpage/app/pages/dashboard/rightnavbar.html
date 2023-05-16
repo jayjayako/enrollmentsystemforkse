@@ -1,0 +1,19 @@
+<div class="fullwidth fullheight rightsidenavdes">
+  <p>Statistics</p>
+  <select
+    id="adminstaffstudentstatsselectid"
+    class="dropdowndes1 admindashboardstatsdropdown"
+    onchange="if(document.getElementById('adminstaffstudentstatsselectid').value=='Student'){
+    includehtml('studstaffstatsid', 'app/pages/dashboard/studentstats.html')
+  }else{
+    includehtml('studstaffstatsid', 'app/pages/dashboard/staffstats.html')
+  }
+  ">
+    <option>Staff</option>
+    <option>Student</option>
+  </select>
+  <div HTMLINCLUDE="studstaffstatsid" class="fullwidth fullheight"></div>
+</div>
+<script>
+  includehtml("studstaffstatsid", "app/pages/dashboard/staffstats.html");
+</script>

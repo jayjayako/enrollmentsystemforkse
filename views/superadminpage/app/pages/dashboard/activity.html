@@ -1,0 +1,35 @@
+<div class="fullwidth fullheight dashboardactivitydes">
+  <div class="fullwidth flexbox flexdirec-row">
+    <h4 class="fullwidth">Latest Activity</h4>
+    <button
+      onclick="defaultsidenavall();
+    document.getElementById('audittrail').classList.add('navbtnactive');
+    includehtml('superadminpage', 'app/pages/audittrail');"
+      class="btndes4 flexbox flexdirec-row"
+      style="width: 33%">
+      <p class="fullwidth" style="margin-left: 15px">View All</p>
+      <ion-icon
+        name="chevron-forward-outline"
+        style="margin-right: 10px; width: 20px"></ion-icon>
+    </button>
+  </div>
+  <table id="dashboardacttable1_cont" class="fullwidth tbldes1">
+    <tr style="border-bottom: 2px solid purple">
+      <th>User Type</th>
+      <th>Lastname</th>
+      <th>Activities</th>
+      <th>Time</th>
+    </tr>
+    <template id="dashboardacttable1_template">
+      <tr>
+        <td>${results[i].id}</td>
+        <td>${results[i].lastname}</td>
+        <td>${results[i].activity_log.activities}</td>
+        <td>${results[i].activity_log.time}</td>
+      </tr>
+    </template>
+  </table>
+</div>
+<script>
+  dashboardvar.displayactivities();
+</script>

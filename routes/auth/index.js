@@ -1,0 +1,24 @@
+var express = require("express");
+var router = express.Router();
+
+var stafflogin = require("../../controllers/login/staff");
+//var studentlogin = require("../../controllers/login/student");
+var checkuser = require("../../controllers/checkuser");
+var logout = require("../../controllers/logout");
+
+//////////////////// staff login ///////////////////
+router.use("/stafflogin", stafflogin);
+////////////////////////////////////////////////////
+//////////////////// student login /////////////////
+//router.post("/studentlogin", studentlogin);
+////////////////////////////////////////////////////
+
+//////////////////// checkuser /////////////////////
+router.use("/checkuser", checkuser);
+////////////////////////////////////////////////////
+
+///////////////////// logout ///////////////////////
+router.use("/logout", logout);
+////////////////////////////////////////////////////
+
+module.exports = router;

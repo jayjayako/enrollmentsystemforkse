@@ -1,0 +1,24 @@
+@use "../../util";
+.aboutpagegrid {
+  background-color: util.$lightBlue;
+  button {
+    width: 10%;
+  }
+  img {
+    width: 30%;
+    height: auto;
+  }
+  article {
+    width: 60%;
+    height: 30%;
+    background-color: util.$white;
+    border-radius: 10px;
+    text-align: center;
+    h3 {
+      padding: 5px;
+    }
+    p {
+      padding: 10px;
+    }
+  }
+}

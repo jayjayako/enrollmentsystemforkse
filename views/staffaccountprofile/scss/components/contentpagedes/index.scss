@@ -1,0 +1,35 @@
+@use "../../util";
+.editprofilegrid {
+  .modal-body {
+    .imgcon {
+      border-radius: 100%;
+      width: 180px;
+      height: 180px;
+      margin-right: 10px;
+      input[type="file"] {
+        display: none;
+      }
+      .defaultimg {
+        border-radius: 100%;
+        border: 2px solid util.$violet;
+        width: 180px;
+        height: 180px;
+      }
+      .hoverimg {
+        border-radius: 100%;
+        border: 2px solid util.$violet;
+        width: 180px;
+        height: 180px;
+        display: none;
+      }
+      &:hover {
+        .hoverimg {
+          display: block;
+        }
+        .defaultimg {
+          display: none;
+        }
+      }
+    }
+  }
+}

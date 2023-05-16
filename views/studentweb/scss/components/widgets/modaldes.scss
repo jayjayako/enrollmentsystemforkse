@@ -1,0 +1,241 @@
+@use "modaltemplate";
+
+.modalbg {
+  @include modaltemplate.modalbgdesign();
+  .modal-content {
+    @include modaltemplate.modalcontentdesign();
+    .modal-header {
+      @include modaltemplate.modalheaderdesign();
+      .close {
+        @include modaltemplate.modalclosedesign();
+      }
+    }
+    .modal-body {
+      @include modaltemplate.modalbodydesign();
+    }
+    .modal-footer {
+      @include modaltemplate.modalfooterdesign();
+    }
+  }
+}
+
+.modalanimateediprofile {
+  animation-name: animatemodal1;
+  animation-duration: 2s;
+}
+@keyframes animatemodal1 {
+  0% {
+    margin-top: 0px;
+    opacity: 0;
+  }
+  25% {
+    margin-top: 11.2%;
+    opacity: 1;
+  }
+}
+
+.modalanimateinquirenow {
+  animation-name: animatemodal2;
+  animation-duration: 2s;
+}
+@keyframes animatemodal2 {
+  0% {
+    margin-top: 0px;
+    opacity: 0;
+  }
+  25% {
+    margin-top: 14.5%;
+    opacity: 1;
+  }
+}
+
+////////////// enroll now animation //////////////
+.modalanimateenrollnow {
+  animation-name: animatemodal3;
+  animation-duration: 2s;
+}
+
+@keyframes animatemodal3 {
+  0% {
+    margin-top: 0px;
+    opacity: 0;
+  }
+  25% {
+    margin-top: 17.61%;
+    opacity: 1;
+  }
+}
+
+.modalanimateenrollnow_newstudent {
+  animation-name: animatemodal3_1;
+  animation-duration: 2s;
+}
+
+@keyframes animatemodal3_1 {
+  0% {
+    margin-top: 0px;
+    opacity: 0;
+  }
+  25% {
+    margin-top: 8%;
+    opacity: 1;
+  }
+}
+
+.modalanimateenrollnow_oldstudent {
+  animation-name: animatemodal3_2;
+  animation-duration: 2s;
+}
+
+@keyframes animatemodal3_2 {
+  0% {
+    margin-top: 0px;
+    opacity: 0;
+  }
+  25% {
+    margin-top: 17%;
+    opacity: 1;
+  }
+}
+
+.modalanimateenrollnow_personalinfo {
+  animation-name: animatemodal3_3;
+  animation-duration: 2s;
+}
+
+@keyframes animatemodal3_3 {
+  0% {
+    margin-top: 0px;
+    opacity: 0;
+  }
+  25% {
+    margin-top: 12.8%;
+    opacity: 1;
+  }
+}
+
+.modalanimateenrollnowsuccesssubmit {
+  animation-name: animatemodal3_4;
+  animation-duration: 2s;
+}
+
+@keyframes animatemodal3_4 {
+  0% {
+    margin-top: 0px;
+    opacity: 0;
+  }
+  25% {
+    margin-top: 16.7%;
+    opacity: 1;
+  }
+}
+
+//////////////////////////////////////////////////
+
+.modalanimatemsgsandnotif {
+  animation-name: animatemodal4;
+  animation-duration: 2s;
+}
+
+@keyframes animatemodal4 {
+  0% {
+    margin-top: 0px;
+    opacity: 0;
+  }
+  25% {
+    margin-top: 17.7%;
+    opacity: 1;
+  }
+}
+
+.modalanimateaccountbalance {
+  animation-name: animatemodal5;
+  animation-duration: 2s;
+}
+
+@keyframes animatemodal5 {
+  0% {
+    margin-top: 0px;
+    opacity: 0;
+  }
+  25% {
+    margin-top: 17.7%;
+    opacity: 1;
+  }
+}
+
+.modaleditprofile {
+  width: 40%;
+  height: 65%;
+}
+
+.modalinquirenow {
+  width: 30%;
+  height: 55%;
+}
+
+//////////// for enroll now modals //////////
+
+.modalenrollnow {
+  width: 30%;
+  height: 45%;
+}
+.modalenrollnow_newstudent {
+  width: 50%;
+  height: 75%;
+}
+.modalenrollnow_oldstudent {
+  width: 50%;
+  height: 47%;
+}
+.modalenrollnow_personalinfo {
+  width: 50%;
+  height: 60%;
+}
+/////////////////////////////////////////////
+
+////////// for message and notification //////
+.modalmsgsandnotif {
+  width: 50%;
+  height: 45%;
+}
+.modalmsgsandnotif_selectscyrlvl {
+  width: 30%;
+  height: 32%;
+}
+.modalmsgsandnotif_tuitionotherfees {
+  width: 50%;
+  height: 71%;
+}
+
+.modalmsgsandnotif_selecttypeofpayment {
+  width: 50%;
+  height: 32%;
+}
+.modalmsgsandnotif_paymentmethod {
+  width: 30%;
+  height: 45%;
+}
+.modalmsgsandnotif_payment {
+  width: 30%;
+  height: 45%;
+}
+.modalmsgsandnotif_successfullpayment {
+  width: 30%;
+  height: 55%;
+}
+
+.modalmsgsandnotif_selectsection {
+  width: 30%;
+  height: 25%;
+}
+.modalmsgsandnotif_schedule {
+  width: 55%;
+  height: 71%;
+}
+//////////////////////////////////////////////
+
+.modalaccountbalance {
+  width: 50%;
+  height: 45%;
+}

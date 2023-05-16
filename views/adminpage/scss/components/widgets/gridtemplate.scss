@@ -1,0 +1,9 @@
+@mixin griddesign($params1, $params2) {
+  display: grid;
+  grid-template-columns: $params1;
+  grid-template-rows: $params2;
+  gap: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}

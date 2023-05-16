@@ -1,0 +1,48 @@
+<div class="fullwidth fullheight flexbox flexdirec-row">
+  <div class="fullwidth fullheight"></div>
+  <div
+    class="modalnotifications modal-content"
+    style="margin-right: 50px; margin-top: 5.5%">
+    <div class="modal-header">
+      <span
+        class="close"
+        onclick="
+        closemodal('1ststackmodalid')
+        "
+        >&times;</span
+      >
+      <h3>Notifications</h3>
+    </div>
+    <div class="modal-body fullwidth fullheight">
+      <div
+        class="fullwidth fullheight"
+        style="height: 85%; overflow-y: scroll; padding: 10px">
+        <div
+          class="fullwidth"
+          style="
+            overflow-wrap: break-word;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb(226, 226, 226);
+            margin-top: 5px;
+          ">
+          sample data
+        </div>
+        <div
+          onclick="
+            openmodal('1ststackmodalid','app/components/modalcontent/useraccess/grantaccess.html')
+          "
+          class="fullwidth"
+          style="
+            overflow-wrap: break-word;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb(226, 226, 226);
+            margin-top: 5px;
+          ">
+          User {name} want to access {name} Module
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

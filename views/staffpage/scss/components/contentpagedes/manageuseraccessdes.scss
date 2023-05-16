@@ -1,0 +1,27 @@
+@use "../../util";
+@use "../widgets";
+.manageuseraccessgrid {
+  @include widgets.griddesign(1fr, 6% 50% auto);
+  .maingridcont {
+    background-color: transparent;
+  }
+  .item1 {
+    grid-row: 1;
+  }
+  .item2 {
+    grid-row: 2;
+  }
+  .item3 {
+    grid-row: 3;
+  }
+  fieldset {
+    border: 1px solid util.$blueGreen;
+  }
+  legend {
+    background-color: util.$blueGreen;
+    color: util.$white;
+  }
+  img {
+    border: 1px solid util.$violet;
+  }
+}

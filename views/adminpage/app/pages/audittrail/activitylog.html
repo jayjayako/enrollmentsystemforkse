@@ -1,0 +1,68 @@
+<div class="fullwidth flexbox flexdirec-row" style="padding: 20px">
+  <h3>Select User Type</h3>
+  <label for="myradioid1" class="radiobutton1" style="margin-left: 15%">
+    <input
+      type="radio"
+      name="audit_activitylogradio"
+      id="myradioid1"
+      class="radio__input"
+      checked="checked" />
+    <div class="radio__radio"></div>
+    Super Admin
+  </label>
+  <label for="myradioid2" class="radiobutton1">
+    <input
+      type="radio"
+      name="audit_activitylogradio"
+      id="myradioid2"
+      class="radio__input" />
+    <div class="radio__radio"></div>
+    Admin
+  </label>
+  <label for="myradioid3" class="radiobutton1">
+    <input
+      type="radio"
+      name="audit_activitylogradio"
+      id="myradioid3"
+      class="radio__input" />
+    <div class="radio__radio"></div>
+    Staff
+  </label>
+</div>
+
+<div class="fullwidth" style="padding-left: 5px; padding-right: 5px">
+  <fieldset
+    class="fullwidth flexbox flexdirec-row"
+    style="border-radius: 10px; padding-bottom: 10px">
+    <legend style="border-radius: 10px; padding: 5px; margin-left: 10px">
+      USER INFORMATION
+    </legend>
+    <div class="fullwidth flexbox flexdirec-col">
+      <p style="padding: 5px">ID Number:</p>
+      <p style="padding: 5px">User Type:</p>
+      <p style="padding: 5px">Firstname:</p>
+      <p style="padding: 5px">Lastname:</p>
+    </div>
+    <div class="fullwidth"></div>
+    <div class="fullwidth">
+      <img
+        class="fullwidth"
+        src="./img/defaultimg.png"
+        style="border-radius: 10px; height: 150px; width: 150px" />
+    </div>
+  </fieldset>
+</div>
+
+<div
+  HTMLINCLUDE="auditrailtable"
+  class="fullwidth fullheight"
+  style="
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 40%;
+    margin-top: 2%;
+  "></div>
+
+<script>
+  includehtml("auditrailtable", "app/pages/audittrail/table.html");
+</script>

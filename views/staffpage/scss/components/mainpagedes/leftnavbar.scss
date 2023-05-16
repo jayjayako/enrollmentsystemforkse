@@ -1,0 +1,52 @@
+@use "../../util";
+
+.leftnavbar {
+  background-color: util.$lightBlue;
+  .logoimage {
+    height: auto;
+    list-style-type: none;
+  }
+
+  .navbtndes {
+    height: 8.3%;
+    cursor: pointer;
+    &:hover {
+      background-color: util.$blueGreen;
+      border-left: 8px solid util.$violet;
+      color: util.$white;
+      transition: 0.8s;
+      cursor: pointer;
+    }
+    &:hover ion-icon {
+      color: util.$white;
+      transition: 0.8s;
+      cursor: pointer;
+    }
+    &:hover label {
+      color: util.$white;
+      transition: 0.8s;
+      cursor: pointer;
+    }
+
+    ion-icon {
+      background-color: transparent;
+      font-size: 27px;
+      cursor: pointer;
+      font-family: util.$font1;
+      margin-left: 10px;
+      transition: 0.3s;
+      color: util.$black;
+    }
+
+    &.navbtnactive {
+      background-color: util.$blueGreen;
+      border-left: 8px solid util.$violet;
+      ion-icon {
+        color: util.$white;
+      }
+      label {
+        color: util.$white;
+      }
+    }
+  }
+}

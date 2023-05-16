@@ -1,0 +1,32 @@
+<div class="fullwidth fullheight cashiergrid">
+  <h3>Cashier</h3>
+  <div class="fullwidth flexbox">
+    <img src="./img/cashvec_1.png" style="width: 40%; height: auto" />
+  </div>
+  <div class="fullwidth cashier-cont">
+    <div
+      onclick="
+      openmodal('1ststackmodalid','app/components/modalcontent/cashier/verifypayment')
+    "
+      class="fullwidth flexbox flexdirec-row cashier-child">
+      <p class="fullwidth">Verify Payment</p>
+      <ion-icon name="checkbox-outline"></ion-icon>
+    </div>
+    <div
+      onclick="
+      openmodal('1ststackmodalid','app/components/modalcontent/cashier/editpaymentmethod.html')
+    "
+      class="fullwidth flexbox flexdirec-row cashier-child">
+      <p class="fullwidth">Edit Payment Method</p>
+      <ion-icon name="logo-paypal"></ion-icon>
+    </div>
+    <div
+      onclick="
+      openmodal('1ststackmodalid','app/components/modalcontent/cashier/viewstudentbalance')
+    "
+      class="fullwidth flexbox flexdirec-row cashier-child">
+      <p class="fullwidth">View Student Balance</p>
+      <ion-icon name="wallet-outline"></ion-icon>
+    </div>
+  </div>
+</div>

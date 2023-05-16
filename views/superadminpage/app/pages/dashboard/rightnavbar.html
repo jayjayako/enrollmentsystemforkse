@@ -1,0 +1,66 @@
+<div
+  class="blockbox fullwidth fullheight rightsidenavdes"
+  style="overflow-y: scroll">
+  <div class="padder">
+    <h3>Statistics</h3>
+  </div>
+  <div class="padder">
+    <div class="spradcarddes">
+      <div class="fullwidth drpdwn2padder">
+        <select
+          class="dropdowndes2"
+          id="schoollevelid"
+          onchange="dashboardfunct('loadnumberofenrolledperschoolevel')"></select>
+      </div>
+      <div class="fullwidth flexbox flexdirec-row">
+        <canvas id="dashcirclecard1" width="75" height="75"></canvas>
+        <p>Number of Enrolled Students Per School Level</p>
+      </div>
+    </div>
+  </div>
+  <div class="padder">
+    <div class="spradcarddes">
+      <div class="fullwidth drpdwn2padder">
+        <select
+          class="dropdowndes2"
+          id="yearlevelid"
+          onchange="dashboardfunct('loadnumberofenrolledperyearlevel')"></select>
+      </div>
+      <div class="fullwidth flexbox flexdirec-row">
+        <canvas id="dashcirclecard2" width="75" height="75"></canvas>
+        <p>Number of Enrolled Students Per Year Level</p>
+      </div>
+    </div>
+  </div>
+  <div class="padder">
+    <div class="spradcarddes">
+      <div class="fullwidth drpdwn2padder">
+        <select
+          class="dropdowndes2"
+          id="sectionid"
+          onchange="dashboardfunct('loadnumberofenrolledpersection')"></select>
+      </div>
+      <div class="fullwidth flexbox flexdirec-row">
+        <canvas id="dashcirclecard3" width="75" height="75"></canvas>
+        <p>Number of Enrolled Students Per Section</p>
+      </div>
+    </div>
+  </div>
+  <div class="padder">
+    <div class="spradcarddes">
+      <div class="fullwidth drpdwn2padder">
+        <select
+          class="dropdowndes2"
+          id="sectionid2"
+          onchange="dashboardfunct('loadnumberofsection')"></select>
+      </div>
+      <div class="fullwidth flexbox flexdirec-row">
+        <canvas id="dashcirclecard4" width="75" height="75"></canvas>
+        <p>Number of Section</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  transaction.getstudentstatscard();
+</script>

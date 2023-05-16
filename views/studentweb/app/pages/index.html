@@ -1,0 +1,53 @@
+<div class="griddashboardpage mainpageanimate">
+  <h3>DASHBOARD</h3>
+  <div class="header">
+    <img src="./img/bgdashboard-edited.png" class="fullwidth fullheight" />
+    <h3>Welcome ${name}</h3>
+    <span class="time" id="time"></span>
+  </div>
+  <div
+    HTMLINCLUDE="enrollprogressid"
+    class="fullwidth"
+    style="height: 110px"></div>
+  <div class="fullwidth gridcontent" style="height: 180px">
+    <div class="fullwidth fullheight maingridcont item1">
+      <div class="fullwidth innercard">
+        <img src="./img/inquire_vector1.png" />
+        <h3>Inquire Now</h3>
+        <ion-icon
+          onclick="openmodal('1ststackmodalid','app/components/modalcontent/inquirenow')"
+          name="chevron-forward-outline"></ion-icon>
+      </div>
+    </div>
+    <div class="fullwidth fullheight maingridcont item2">
+      <div class="fullwidth innercard">
+        <img src="./img/enroll_vector.png" />
+        <h3>Enroll Now</h3>
+        <ion-icon
+          onclick="openmodal('1ststackmodalid','app/components/modalcontent/enrollnow')"
+          name="chevron-forward-outline"></ion-icon>
+      </div>
+    </div>
+    <div class="fullwidth fullheight maingridcont item3">
+      <div class="fullwidth innercard">
+        <img src="./img/message_vector1.png" />
+        <h3>Messages and Notifications</h3>
+        <ion-icon
+          onclick="openmodal('1ststackmodalid','app/components/modalcontent/msgsandnotif')"
+          name="chevron-forward-outline"></ion-icon>
+      </div>
+    </div>
+    <div class="fullwidth fullheight maingridcont item4">
+      <div class="fullwidth innercard">
+        <img src="./img/balance_vector1.png" />
+        <h3>Account Balance</h3>
+        <ion-icon
+          onclick="openmodal('1ststackmodalid','app/components/modalcontent/accountbalance')"
+          name="chevron-forward-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  includehtml("enrollprogressid", "app/pages/enrollprogress.html");
+</script>

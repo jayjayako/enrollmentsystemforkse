@@ -1,0 +1,81 @@
+<div class="fullwidth fullheight flexbox restorestudentgrid">
+  <div class="modalrestorestudent modal-content">
+    <div class="modal-header">
+      <span
+        class="close"
+        onclick="
+      closemodal('1ststackmodalid')
+      "
+        >&times;</span
+      >
+      <h3>Restore Student</h3>
+    </div>
+    <div class="modal-body">
+      <fieldset class="fullwidth fullheight flexbox flexdirec-row">
+        <legend>USER INFORMATION</legend>
+        <div class="fullwidth fullheight flexbox flexdirec-col">
+          <div
+            class="fullwidth fullheight flexbox flexdirec-row"
+            style="padding-bottom: 4px">
+            <label class="fullwidth" style="margin-left: 20px"
+              >ID Number:</label
+            >
+            <label class="fullwidth">data</label>
+          </div>
+          <div
+            class="fullwidth fullheight flexbox flexdirec-row"
+            style="padding-bottom: 4px">
+            <label class="fullwidth" style="margin-left: 20px"
+              >Firstname:</label
+            >
+            <label class="fullwidth">data</label>
+          </div>
+          <div
+            class="fullwidth fullheight flexbox flexdirec-row"
+            style="padding-bottom: 4px">
+            <label class="fullwidth" style="margin-left: 20px">Lastname:</label>
+            <label class="fullwidth">data</label>
+          </div>
+          <div
+            class="fullwidth fullheight flexbox flexdirec-row"
+            style="padding-bottom: 4px">
+            <label class="fullwidth" style="margin-left: 20px"
+              >School Level:</label
+            >
+            <label class="fullwidth">data</label>
+          </div>
+          <div
+            class="fullwidth fullheight flexbox flexdirec-row"
+            style="padding-bottom: 4px">
+            <label class="fullwidth" style="margin-left: 20px"
+              >Year Level:</label
+            >
+            <label class="fullwidth">data</label>
+          </div>
+          <div
+            class="fullwidth fullheight flexbox flexdirec-row"
+            style="padding-bottom: 4px">
+            <label class="fullwidth" style="margin-left: 20px">Section:</label>
+            <label class="fullwidth">data</label>
+          </div>
+        </div>
+        <div style="padding: 10px">
+          <img src="./img/defaultimg.png" />
+        </div>
+      </fieldset>
+      <div
+        HTMLINCLUDE="managestudentrestoretable"
+        class="fullwidth fullheight"
+        style="padding-top: 10px; height: 220px"></div>
+      <div class="fullwidth flexbox" style="padding-top: 5px">
+        <button class="btndes4" style="width: 30%">RESTORE</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  includehtml(
+    "managestudentrestoretable",
+    "app/components/modalcontent/managestudent/table.html"
+  );
+</script>

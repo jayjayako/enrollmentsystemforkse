@@ -1,0 +1,61 @@
+<div class="fullwidth fullheight flexbox">
+  <img src="./img/kse-logo.png" class="imgsizedes60" />
+</div>
+<div class="fullwidth fullheight flexbox flexdirec-col studentloginpage">
+  <div
+    class="fullwidth flexbox flexdirec-col"
+    style="padding-left: 20%; padding-right: 20%">
+    <h3 style="margin-bottom: 20px">Log-in</h3>
+    <div class="fullwidth flexbox flexdirec-row">
+      <div class="imgcon flexbox">
+        <img
+          src="./img/username-icon-violet.png"
+          style="width: 25px; height: auto" />
+      </div>
+      <input class="inputtextdes2" type="text" placeholder="Username" />
+    </div>
+    <div class="fullwidth flexbox flexdirec-row">
+      <div class="imgcon flexbox">
+        <img
+          src="./img/password-icon-violet.png"
+          style="width: 25px; height: auto" />
+      </div>
+      <input class="inputtextdes2" type="text" placeholder="Password" />
+    </div>
+    <div class="fullwidth" style="text-align: right">
+      <button
+        onclick='
+        includehtml("studentloginpageid", "app/pages/studentlogin/forgotpasswordpage");
+        '
+        class="buttonlink"
+        style="text-decoration: none; font-size: 13px">
+        Forgot Password?
+      </button>
+    </div>
+    <button
+      onclick="location.replace('../studentweb')"
+      class="btndes3"
+      style="margin-top: 20px">
+      LOG IN
+    </button>
+    <div
+      class="fullwidth flexbox flexdirec-row"
+      style="text-decoration: none; font-size: 13px; margin-top: 20px">
+      <p>Don't have an account yet?&nbsp;&nbsp;</p>
+      <p
+        style="font-weight: bold; text-decoration: none"
+        class="buttonlink"
+        onclick='
+        includehtml("studentloginpageid", "app/pages/studentlogin/registerpage");
+        '>
+        Register Now
+      </p>
+    </div>
+    <button
+      class="buttonlink"
+      style="text-decoration: none; font-size: 13px; margin-top: 20px"
+      onclick='includehtml("staffandstudentpage", "app/pages/stafflogin");'>
+      Staff Login
+    </button>
+  </div>
+</div>

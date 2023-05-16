@@ -1,0 +1,80 @@
+<div class="fullwidth fullheight flexbox flexdirec-col newstudentgrid">
+  <div class="fullwidth fullheight" style="overflow-y: scroll; height: 300px">
+    <div class="fullwidth flexbox flexdirec-row">
+      <div class="flexbox flexdirec-col">
+        <img src="./img/defaultimg.png" />
+        <h4 class="fullwidth flexbox">Student Table</h4>
+      </div>
+      <div class="fullwidth flexbox flexdirec-row">
+        <div class="flexbox flexdirec-col" style="padding: 10px; width: 30%">
+          <h4>School Level</h4>
+          <div class="fullwidth">
+            <select class="dropdowndes1"></select>
+          </div>
+        </div>
+        <div class="flexbox flexdirec-col" style="padding: 10px; width: 30%">
+          <h4>Year Level</h4>
+          <div class="fullwidth">
+            <select class="dropdowndes1"></select>
+          </div>
+        </div>
+        <div class="flexbox flexdirec-col" style="padding: 10px; width: 30%">
+          <h4>Section</h4>
+          <div class="fullwidth">
+            <select class="dropdowndes1"></select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fullwidth flexbox flexdirec-row">
+      <p class="fullwidth">Accessibility: Status:</p>
+      <button class="btndes4" style="width: 20%">Access Now</button>
+    </div>
+    <div class="fullwidth flexbox flexdirec-row">
+      <p class="fullwidth">ID:</p>
+      <p class="fullwidth">Name:</p>
+    </div>
+    <div
+      HTMLINCLUDE="editenrolleerecordsnewstudenttable1"
+      class="fullwidth fullheight"
+      style="padding-top: 10px; height: 170px"></div>
+    <h4>Student Files</h4>
+    <div
+      HTMLINCLUDE="editenrolleerecordsnewstudenttable2"
+      class="fullwidth fullheight"
+      style="padding-top: 10px; height: 170px"></div>
+  </div>
+  <div class="fullwidth fullheight flexbox flexdirec-row">
+    <div class="fullwidth" style="padding: 10px">
+      <button
+        onclick="
+        openmodal('2ndstackmodalid','app/components/modalcontent/registrar/editenrolleerecords/studentpersonalinfo.html')
+      "
+        class="btndes4">
+        VIEW INFORMATION
+      </button>
+    </div>
+    <div class="fullwidth" style="padding: 10px">
+      <button class="btndes4">APPROVE</button>
+    </div>
+    <div class="fullwidth" style="padding: 10px">
+      <button
+        onclick="
+      openmodal('2ndstackmodalid','app/components/modalcontent/registrar/editenrolleerecords/viewadmitfiles.html')
+      "
+        class="btndes4">
+        VIEW FILE
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+  includehtml(
+    "editenrolleerecordsnewstudenttable1",
+    "app/components/modalcontent/registrar/editenrolleerecords/table.html"
+  );
+  includehtml(
+    "editenrolleerecordsnewstudenttable2",
+    "app/components/modalcontent/registrar/editenrolleerecords/table.html"
+  );
+</script>

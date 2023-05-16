@@ -1,0 +1,70 @@
+<div class="fullwidth" style="height: 90%; overflow-y: auto">
+  <div class="fullwidth flexbox flexdirec-row" style="padding: 5px">
+    <div
+      class="fullwidth flexbox flexdirec-col"
+      style="padding-left: 3px; padding-right: 3px">
+      <p class="fullwidth" style="text-align: left">Select School Level</p>
+      <select class="dropdowndes1"></select>
+    </div>
+    <div
+      class="fullwidth flexbox flexdirec-col"
+      style="padding-left: 3px; padding-right: 3px">
+      <p class="fullwidth" style="text-align: left">Select Year Level</p>
+      <select class="dropdowndes1"></select>
+    </div>
+    <div
+      class="fullwidth flexbox flexdirec-col"
+      style="padding-left: 3px; padding-right: 3px">
+      <p class="fullwidth" style="text-align: left">Select Section</p>
+      <select class="dropdowndes1"></select>
+    </div>
+  </div>
+
+  <div class="fullwidth flexbox flexdirec-row">
+    <p class="fullwidth">Accessibility: Status:</p>
+    <button class="btndes4" style="width: 20%">Access Now</button>
+  </div>
+
+  <div class="fullwidth" style="padding: 10px">
+    <fieldset
+      class="fullwidth flexbox flexdirec-row"
+      style="border-radius: 10px; padding-bottom: 10px">
+      <legend style="border-radius: 10px; padding: 5px; margin-left: 10px">
+        USER INFORMATION
+      </legend>
+      <div class="fullwidth flexbox flexdirec-col">
+        <p style="padding: 5px">ID Number:</p>
+        <p style="padding: 5px">User Type:</p>
+        <p style="padding: 5px">Firstname:</p>
+        <p style="padding: 5px">Lastname:</p>
+      </div>
+      <div class="fullwidth"></div>
+      <div class="fullwidth fullheight flexbox">
+        <img
+          class="fullwidth"
+          src="./img/defaultimg.png"
+          style="border-radius: 10px; height: 120px; width: 120px" />
+      </div>
+    </fieldset>
+  </div>
+  <div
+    HTMLINCLUDE="admindepttable"
+    class="fullwidth fullheight"
+    style="padding: 5px; height: 200px"></div>
+  <div class="fullwidth flexbox" style="margin-top: 2%">
+    <button
+      onclick="
+        openmodal('1ststackmodalid','app/components/modalcontent/enlistment/viewstudent.html')
+      "
+      class="btndes4"
+      style="margin-left: 10%; margin-right: 10%">
+      View Student
+    </button>
+    <button class="btndes4" style="margin-left: 10%; margin-right: 10%">
+      Enlist
+    </button>
+  </div>
+</div>
+<script>
+  includehtml("admindepttable", "app/pages/enlistment/table.html");
+</script>

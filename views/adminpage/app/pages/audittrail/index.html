@@ -1,0 +1,39 @@
+<div class="fullwidth fullheight audittrailgrid">
+  <!-- this is tab buttons -->
+  <div
+    class="fullwidth fullheight flexbox flexdirec-row tab1 maingridcont tabbutton">
+    <label class="flexbox flexdirec-row" style="width: 20%">
+      <input
+        onclick="includehtml('audittraillog', 'app/pages/audittrail/activitylog.html');"
+        type="radio"
+        checked="checked"
+        name="radio1"
+        class="radiobtn1" />
+      <div class="fullwidth tabdes1" style="text-align: center; padding: 5px">
+        Activity Log
+      </div>
+    </label>
+
+    <label class="flexbox flexdirec-row" style="width: 20%">
+      <input
+        onclick="includehtml('audittraillog', 'app/pages/audittrail/loghistory.html');"
+        type="radio"
+        name="radio1"
+        class="radiobtn1" />
+      <div class="fullwidth tabdes1" style="text-align: center; padding: 5px">
+        Log History
+      </div>
+    </label>
+    <div class="fullwidth"></div>
+  </div>
+  <!-- /////////////////// -->
+
+  <!-- this is content tab -->
+  <div
+    HTMLINCLUDE="audittraillog"
+    class="fullheight fullwidth maingridcont tabcontent"></div>
+</div>
+
+<script>
+  includehtml("audittraillog", "app/pages/audittrail/activitylog.html");
+</script>

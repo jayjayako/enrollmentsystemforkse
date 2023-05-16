@@ -1,0 +1,27 @@
+<div class="fullwidth fullheight dashboardgrid">
+  <div class="fullwidth fullheight maingridcont item1">
+    <div class="fullwidth fullheight dashboardheader">
+      <div style="padding: 10px; margin-top: 5%">
+        <div style="padding: 10px">
+          <h3 id="weekday">MONDAY</h3>
+        </div>
+        <div style="padding: 10px">
+          <h5 id="date">December 25, 2021</h5>
+        </div>
+        <div style="padding: 10px">
+          <h1 id="time">12:00:59</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    HTMLINCLUDE="activity"
+    class="fullwidth fullheight maingridcont item2"></div>
+  <div
+    HTMLINCLUDE="rightnavbar"
+    class="fullwidth fullheight maingridcont item3"></div>
+</div>
+<script>
+  includehtml("activity", "app/pages/dashboard/activity.html");
+  includehtml("rightnavbar", "app/pages/dashboard/rightnavbar.html");
+</script>

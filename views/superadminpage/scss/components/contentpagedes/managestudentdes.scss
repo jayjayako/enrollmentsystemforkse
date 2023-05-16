@@ -1,0 +1,47 @@
+@use "../../util";
+@use "../widgets";
+.managestudentgrid {
+  @include widgets.griddesign(1fr, 6% 50% auto);
+  .maingridcont {
+    background-color: transparent;
+  }
+  .item1 {
+    grid-row: 1;
+  }
+  .item2 {
+    grid-row: 2;
+  }
+  .item3 {
+    grid-row: 3;
+  }
+  fieldset {
+    border: 1px solid util.$blueGreen;
+  }
+  legend {
+    background-color: util.$blueGreen;
+    color: util.$white;
+  }
+  img {
+    border: 1px solid util.$violet;
+  }
+}
+
+.restorestudentgrid {
+  fieldset {
+    border: 1px solid util.$blueGreen;
+    border-radius: 10px;
+    legend {
+      border-radius: 10px;
+      background-color: util.$blueGreen;
+      color: util.$white;
+      padding: 5px;
+      margin-left: 10px;
+    }
+    img {
+      border: 1px solid util.$violet;
+      border-radius: 10px;
+      width: 130px;
+      height: 130px;
+    }
+  }
+}

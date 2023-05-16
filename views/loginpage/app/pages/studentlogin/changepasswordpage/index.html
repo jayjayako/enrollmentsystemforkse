@@ -1,0 +1,40 @@
+<div class="fullwidth fullheight flexbox">
+  <img src="./img/kse-logo.png" class="imgsizedes60" />
+</div>
+<div class="fullwidth fullheight flexbox flexdirec-col studentforgotpasspage">
+  <div
+    class="fullwidth flexbox flexdirec-col"
+    style="padding-left: 10%; padding-right: 10%">
+    <h2 class="fullwidth" style="text-align: left">Change Password</h2>
+    <h3>In order to protect your account, make sure your password:</h3>
+    <br />
+    <ul style="margin-left: 30px">
+      <li>is not the same as your old password</li>
+      <li>
+        Does not match or significantly contain your email or username, e.g do
+        not use 'username123'
+      </li>
+      <li>ha atleast 8 characters</li>
+      <li>inclusion of atleast one special character, e.g |.!@#?|</li>
+    </ul>
+    <br />
+    <br />
+    <label class="fullwidth" style="text-align: left">New Password</label>
+    <input
+      class="inputtextdes2"
+      placeholder="Type your new password"
+      type="password" />
+    <label class="fullwidth" style="text-align: left">Re-enter Password</label>
+    <input
+      class="inputtextdes2"
+      placeholder="Re-enter your new password"
+      type="password" />
+    <button
+      onclick='
+    includehtml("studentloginpageid", "app/pages/studentlogin/changepass_successpage");
+    '
+      class="btndes3">
+      DONE
+    </button>
+  </div>
+</div>

@@ -1,0 +1,139 @@
+@use "../../util";
+@use "../widgets";
+.gridmainpage {
+  @include widgets.griddesign(30.3% auto, 50% auto);
+  background-color: util.$gray;
+  gap: 10px;
+  padding: 10px;
+  .maingridcont {
+    background-color: util.$white;
+    border-radius: 10px;
+  }
+  .item1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    .strip1 {
+      margin-top: 10%;
+      margin-bottom: 10%;
+      background-color: util.$violet;
+      height: 15%;
+      position: relative;
+      .innerstrip1 {
+        width: 20px;
+        background-color: util.$white;
+        position: absolute;
+        left: 0;
+        margin-left: 20px;
+      }
+      h3 {
+        color: util.$white;
+      }
+    }
+    img {
+      border-radius: 100%;
+      border: 2px solid util.$violet;
+      width: 200px;
+      height: 200px;
+      margin-bottom: 30px;
+    }
+  }
+  .item2 {
+    grid-column: 2;
+    grid-row: 1;
+    .strip2 {
+      background-color: util.$lightBlue;
+      width: 21.5%;
+      margin-left: 6%;
+      h3 {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .innerstrip2 {
+        background-color: util.$white;
+        height: 10%;
+      }
+    }
+    img {
+      cursor: pointer;
+    }
+  }
+  .item3 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+.content2grid {
+  @include widgets.griddesign(5.5% 22.3% auto, 13% auto);
+  .maingridcont {
+    background-color: transparent;
+    border-radius: 0px;
+  }
+  .item1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+  .item2 {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    background-color: util.$lightBlue;
+    h3 {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .innerstrip2 {
+      height: 10%;
+      background-color: util.$white;
+    }
+  }
+  .item3 {
+    grid-column: 3;
+    grid-row: 1;
+    img {
+      width: 4.5%;
+    }
+  }
+  .item4 {
+    grid-column: 3;
+    grid-row: 2;
+    margin-left: 10%;
+    padding-bottom: 10%;
+    p {
+      padding: 5px;
+    }
+  }
+}
+
+.content3grid {
+  @include widgets.griddesign(5.5% 22.3% auto, 1fr);
+  .maingridcont {
+    background-color: transparent;
+    border-radius: 0px;
+  }
+  .item1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .item2 {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: util.$lightBlue;
+    h3 {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .innerstrip2 {
+      height: 10%;
+      background-color: util.$white;
+    }
+  }
+  .item3 {
+    grid-column: 3;
+    grid-row: 1;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}

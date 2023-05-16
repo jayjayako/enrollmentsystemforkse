@@ -1,3 +1,22 @@
 {
-  "liveServer.settings.port": 5503
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".css",
+      "savePath": "/views/staffaccountprofile/css",
+      "savePathReplacementPairs": {
+        "scss": "css"
+      }
+    }
+  ],
+  "liveSassCompile.settings.includeItems": [
+    "/views/staffaccountprofile/scss/style.scss"
+  ],
+  "liveServer.settings.port": 5502
 }
+
+// {
+//   "editor.formatOnSave": false,
+//   "liveServer.settings.port": 5504
+// }
+// be careful of this to avoid modification of html files

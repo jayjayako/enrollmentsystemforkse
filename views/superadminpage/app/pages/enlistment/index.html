@@ -1,0 +1,41 @@
+<h3>Enlistment</h3>
+<div class="fullwidth fullheight enlistmentidgrid">
+  <!-- this is tab buttons -->
+  <div
+    class="fullwidth fullheight flexbox flexdirec-row tab1 maingridcont tabbutton">
+    <label class="flexbox flexdirec-row" style="width: 20%">
+      <input
+        onclick="includehtml('enlistmentid', 'app/pages/enlistment/notenrolled.html');"
+        type="radio"
+        checked="checked"
+        name="radio1"
+        class="radiobtn1" />
+      <div class="fullwidth tabdes1" style="text-align: center; padding: 5px">
+        Not Enrolled
+      </div>
+    </label>
+
+    <label class="flexbox flexdirec-row" style="width: 20%">
+      <input
+        onclick="includehtml('enlistmentid', 'app/pages/enlistment/enrolled.html');"
+        type="radio"
+        name="radio1"
+        class="radiobtn1" />
+      <div class="fullwidth tabdes1" style="text-align: center; padding: 5px">
+        Enrolled
+      </div>
+    </label>
+    <div class="fullwidth"></div>
+  </div>
+  <!-- /////////////////// -->
+
+  <!-- this is content tab -->
+
+  <div class="fullwidth maingridcont tabcontent">
+    <div HTMLINCLUDE="enlistmentid" class="fullwidth fullheight"></div>
+  </div>
+</div>
+
+<script>
+  includehtml("enlistmentid", "app/pages/enlistment/notenrolled.html");
+</script>

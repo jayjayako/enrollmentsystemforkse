@@ -1,0 +1,59 @@
+<div class="fullwidth fullheight flexbox flexdirec-row mainheader">
+  <div
+    class="fullwidth fullheight flexbox"
+    style="text-align: left; padding-bottom: 20px">
+    <h3 class="fullwidth" style="margin-left: 20px">Hello ${name}</h3>
+  </div>
+  <div
+    class="fullwidth fullheight flexbox flexdirec-row"
+    style="padding-bottom: 10px; padding-left: 40%">
+    <img
+      src="./img/defaultimg.png"
+      style="
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin-left: -10px;
+      " />
+    <button
+      onclick="
+      openmodal('1ststackmodalid','app/components/modalcontent/notifications.html')
+      "
+      class="notifbtndes"
+      style="margin-left: 20px">
+      <ion-icon name="notifications-outline"></ion-icon>
+    </button>
+    <span
+      onclick="
+      openmodal('1ststackmodalid','app/components/modalcontent/notifications.html')
+    "
+      class="notifdot flexbox notifposition"
+      id="notifid"
+      style="margin-left: -21px; z-index: 1; margin-top: 18px">
+      20
+    </span>
+
+    <div class="dropdowndesnav" style="margin-left: 15px" data-dropdown>
+      <button class="dropdown-link btnnavdropdown" data-dropdown-button>
+        <ion-icon
+          name="caret-down-outline"
+          size="small"
+          data-dropdown-button></ion-icon>
+      </button>
+      <div class="dropdown-menu">
+        <a onclick="location.replace('../staffaccountprofile')">
+          <ion-icon name="person-outline"></ion-icon>
+          Profile</a
+        >
+        <a onclick="location.replace('../aboutpage')">
+          <ion-icon name="information-circle-outline"></ion-icon>
+          About</a
+        >
+        <a onclick="location.replace('../loginpage')">
+          <ion-icon name="power-outline"></ion-icon>
+          Logout</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

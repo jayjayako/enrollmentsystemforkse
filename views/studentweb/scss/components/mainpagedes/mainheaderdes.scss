@@ -1,0 +1,54 @@
+@use "../../util";
+@use "../widgets";
+.gridmainmainheader {
+  .burgerbgcontdefault {
+    background-color: none;
+    width: 70px;
+    position: absolute;
+    left: 0;
+    ion-icon {
+      font-size: 37px;
+      color: util.$black;
+      cursor: pointer;
+    }
+  }
+  .dropdowncaretdes {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    border-radius: 50%;
+  }
+
+  .burgerbgcontactive {
+    background-color: rgb(211, 211, 211);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+}
+.dropdownnavcon {
+  display: none;
+  background-color: transparent;
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+}
+.dropdownnavinner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 55px;
+  margin-right: 5px;
+  width: 120px;
+  height: 30px;
+  background-color: white;
+  z-index: 11;
+  cursor: pointer;
+  ion-icon {
+    color: util.$violet;
+  }
+  p {
+    color: util.$violet;
+  }
+}
+.show {
+  display: block;
+}

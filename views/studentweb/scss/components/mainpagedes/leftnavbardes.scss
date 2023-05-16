@@ -1,0 +1,36 @@
+@use "../../util";
+@use "../widgets";
+.gridmainleftnavbar {
+  background-color: util.$black;
+  .navcontdes {
+    position: relative;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+    .navicondes {
+      background-color: transparent;
+      position: absolute;
+      cursor: pointer;
+      transition: 0.3s;
+      color: util.$white;
+      width: 25px;
+      height: 25px;
+      left: 0;
+      margin-left: 13px;
+    }
+    .navnamedes {
+      width: 100%;
+      color: util.$white;
+      padding-left: 65px;
+      text-align: left;
+    }
+  }
+  .navbtnactive {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}

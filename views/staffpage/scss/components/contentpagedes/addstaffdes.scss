@@ -1,0 +1,43 @@
+@use "../../util";
+@use "../widgets";
+@use "../../globals";
+.addstaffgrid {
+  @include widgets.griddesign(73% auto, 60% auto);
+  .maingridcont {
+    background-color: transparent;
+  }
+  .item1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .item2 {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .item3 {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+  }
+  fieldset {
+    border: 1px solid util.$blueGreen;
+    ul {
+      li {
+        list-style-type: disc;
+        .innerlist1 {
+          @extend .fullwidth;
+          @extend .flexbox;
+          @extend .flexdirec-row;
+          text-align: left;
+        }
+      }
+    }
+  }
+  legend {
+    background-color: util.$blueGreen;
+    color: util.$white;
+  }
+
+  img {
+    border: 1px solid util.$violet;
+  }
+}

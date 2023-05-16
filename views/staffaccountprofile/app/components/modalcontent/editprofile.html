@@ -1,0 +1,119 @@
+<div id="editprofile" class="fullwidth fullheight flexbox editprofilegrid">
+  <div class="modal-content modaleditprofile">
+    <div class="modal-header">
+      <span class="close" onclick="closemodal('1ststackmodalid')">&times;</span>
+      <h3>Edit Profile</h3>
+    </div>
+    <div class="modal-body fullwidth flexbox flexdirec-row">
+      <div class="imgcon flexbox">
+        <input
+          type="file"
+          id="picture"
+          name="picture"
+          accept="image/x-png,image/gif,image/jpeg"
+          onchange="loadFile(event)" />
+        <img
+          id="myprofileimage"
+          class="defaultimg"
+          src="./img/defaultimg.png" />
+        <img
+          class="hoverimg"
+          src="./img/placeholder.jpg"
+          onclick="uploadprofilepic()" />
+      </div>
+      <div class="fullwidth fullheight flexbox flexdirec-col">
+        <div
+          class="fullwidth flexbox flexdirec-row"
+          style="margin-bottom: 10px">
+          <div class="fullwidth flexbox flexdirec-col">
+            <label class="fullwidth">Username</label>
+            <input
+              class="inputtextdes3"
+              type="text"
+              value="${username}"
+              id="usernameidvar" />
+          </div>
+          <div style="width: 20px"></div>
+          <div class="fullwidth flexbox flexdirec-col">
+            <label class="fullwidth">Password</label>
+            <input
+              class="inputtextdes3"
+              type="password"
+              value="${password}"
+              id="passwordidvar" />
+          </div>
+        </div>
+        <div
+          class="fullwidth flexbox flexdirec-row"
+          style="margin-bottom: 10px">
+          <div class="fullwidth flexbox flexdirec-col">
+            <label class="fullwidth">Lastname</label>
+            <input
+              class="inputtextdes3"
+              type="text"
+              value="${lastname}"
+              id="lastnameidvar" />
+          </div>
+          <div style="width: 20px"></div>
+          <div class="fullwidth flexbox flexdirec-col">
+            <label class="fullwidth">Firstname</label>
+            <input
+              class="inputtextdes3"
+              type="text"
+              value="${firstname}"
+              id="firstnameidvar" />
+          </div>
+        </div>
+        <div
+          class="fullwidth flexbox flexdirec-row"
+          style="margin-bottom: 10px">
+          <div class="fullwidth flexbox flexdirec-col">
+            <label class="fullwidth">Birthdate</label>
+            <input
+              class="inputtextdes3"
+              type="text"
+              value="${birthdate}"
+              id="birthdateidvar" />
+          </div>
+          <div style="width: 20px"></div>
+          <div class="fullwidth flexbox flexdirec-col">
+            <label class="fullwidth">Phone</label>
+            <input
+              class="inputtextdes3"
+              type="text"
+              value="${phone}"
+              id="phoneidvar" />
+          </div>
+        </div>
+        <div
+          class="fullwidth flexbox flexdirec-row"
+          style="margin-bottom: 10px">
+          <div class="fullwidth flexbox flexdirec-col">
+            <label class="fullwidth">Email</label>
+            <input
+              class="inputtextdes3"
+              type="text"
+              value="${email}"
+              id="emailidvar" />
+          </div>
+          <div style="width: 20px"></div>
+          <div class="fullwidth flexbox flexdirec-col">
+            <label class="fullwidth">Address</label>
+            <input
+              class="inputtextdes3"
+              type="text"
+              value="${address}"
+              id="addressidvar" />
+          </div>
+        </div>
+        <button class="btndes4" onclick="staffaccprofilevar.updateuser()">
+          SAVE
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  staffaccprofilevar.displayeditprofile();
+</script>

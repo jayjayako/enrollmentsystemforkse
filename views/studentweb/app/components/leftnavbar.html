@@ -1,0 +1,43 @@
+<div class="fullwidth fullheight gridmainleftnavbar">
+  <div
+    id="home"
+    onclick="defaultsidenavall();
+    includehtml('maincontentid', 'app/pages');
+      document.getElementById('home').classList.add('navbtnactive');
+      "
+    class="fullwidth flexbox flexdirec-row navcontdes navbtnactive"
+    style="margin-top: 40px">
+    <ion-icon name="home-outline" class="navicondes"></ion-icon>
+    <span class="navnamedes">Home</span>
+  </div>
+  <div
+    id="myaccount"
+    onclick="defaultsidenavall();
+    includehtml('maincontentid', 'app/pages/myaccount.html'); 
+      document.getElementById('myaccount').classList.add('navbtnactive');
+      "
+    class="fullwidth flexbox flexdirec-row navcontdes">
+    <ion-icon name="person-outline" class="navicondes"></ion-icon>
+    <span class="navnamedes">My Account</span>
+  </div>
+  <div
+    id="aboutus"
+    onclick="defaultsidenavall();
+    includehtml('maincontentid', 'app/pages/aboutus.html');
+      document.getElementById('aboutus').classList.add('navbtnactive');
+      "
+    class="fullwidth flexbox flexdirec-row navcontdes">
+    <ion-icon name="information-circle-outline" class="navicondes"></ion-icon>
+    <span class="navnamedes">About Us</span>
+  </div>
+  <div
+    id="contactus"
+    onclick="defaultsidenavall();
+    includehtml('maincontentid', 'app/pages/contactus.html'); 
+      document.getElementById('contactus').classList.add('navbtnactive');
+      "
+    class="fullwidth flexbox flexdirec-row navcontdes">
+    <ion-icon name="call-outline" class="navicondes"></ion-icon>
+    <span class="navnamedes">Contact Us</span>
+  </div>
+</div>

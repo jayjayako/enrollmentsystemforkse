@@ -1,0 +1,143 @@
+@use "modaltemplate";
+
+.modalbg {
+  @include modaltemplate.modalbgdesign();
+  .modal-content {
+    @include modaltemplate.modalcontentdesign();
+    .modal-header {
+      @include modaltemplate.modalheaderdesign();
+      .close {
+        @include modaltemplate.modalclosedesign();
+      }
+    }
+    .modal-body {
+      @include modaltemplate.modalbodydesign();
+    }
+    .modal-footer {
+      @include modaltemplate.modalfooterdesign();
+    }
+  }
+}
+
+.modalnotifications {
+  width: 58%;
+  height: 85%;
+}
+
+.modalenrollmentschedule {
+  width: 40%;
+  height: 55%;
+}
+
+.modaleditenrolleerecords {
+  width: 80%;
+  height: 72%;
+}
+
+.modaleditrequirements {
+  width: 50%;
+  height: 52%;
+}
+
+.modalenrollmentreservation {
+  width: 70%;
+  height: 75%;
+}
+
+.modalschoollevel {
+  width: 30%;
+  height: 40%;
+}
+
+.modalyearlevel {
+  width: 30%;
+  height: 49%;
+}
+
+.modalsection {
+  width: 30%;
+  height: 57%;
+}
+
+.modalschoolschedule {
+  width: 30%;
+  height: 28%;
+}
+
+.modalstudentmaxnumber {
+  width: 30%;
+  height: 52%;
+}
+
+.modalstudentpersonalinfo {
+  width: 70%;
+  height: 80%;
+}
+.modalrestorestudent {
+  width: 70%;
+  height: 77%;
+}
+.modaledituseraccess {
+  width: 70%;
+  height: 70%;
+}
+
+.modalotherfees {
+  width: 70%;
+  height: 85%;
+}
+
+.modalpaymentplans {
+  width: 70%;
+  height: 85%;
+}
+.modalpaymentplanamount {
+  width: 70%;
+  height: 85%;
+}
+
+.modalverifypayment {
+  width: 70%;
+  height: 89%;
+}
+
+.modaleditpaymentmethod {
+  width: 30%;
+  height: 65%;
+}
+
+.modalviewstudentbalance {
+  width: 70%;
+  height: 89%;
+}
+
+.modalviewadmitfiles {
+  width: 95%;
+  height: 95%;
+}
+.modalviewpaymentfiles {
+  width: 95%;
+  height: 95%;
+}
+.modalviewstudent {
+  width: 50%;
+}
+// ///// for add admin ////////
+.modaladdadmin_editmoduleaccess {
+  width: 40%;
+  height: 50%;
+}
+// ////////////////////////////
+// ///// for add staff ////////
+.modaladdstaff_editmoduleaccess {
+  width: 40%;
+  height: 65%;
+}
+// ////////////////////////////
+
+// ///// for user access //////
+.modalusergrantaccess {
+  width: 30%;
+  height: 60%;
+}
+// ////////////////////////////

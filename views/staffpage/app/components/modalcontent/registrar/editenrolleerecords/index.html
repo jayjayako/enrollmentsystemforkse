@@ -1,0 +1,96 @@
+<div class="fullwidth fullheight flexbox editenrolleerecordsgrid">
+  <div class="modaleditenrolleerecords modal-content">
+    <div class="modal-header">
+      <span
+        class="close"
+        onclick="
+        closemodal('1ststackmodalid')
+        "
+        >&times;</span
+      >
+      <h3>Edit Enrollee Records</h3>
+    </div>
+    <div class="modal-body fullwidth">
+      <!-- this is tab buttons -->
+      <div class="fullwidth flexbox flexdirec-row tab1 tabbutton">
+        <label class="flexbox flexdirec-row" style="width: 25%">
+          <input
+            onclick='includehtml(
+              "editenrolleerecordstabid",
+              "app/components/modalcontent/registrar/editenrolleerecords/newstudent.html"
+            );'
+            type="radio"
+            checked="checked"
+            name="radio1"
+            class="radiobtn1" />
+          <div
+            class="fullwidth tabdes1"
+            style="text-align: center; padding: 14px">
+            New Student
+          </div>
+        </label>
+
+        <label class="flexbox flexdirec-row" style="width: 25%">
+          <input
+            onclick='includehtml(
+              "editenrolleerecordstabid",
+              "app/components/modalcontent/registrar/editenrolleerecords/oldstudent.html"
+            );'
+            type="radio"
+            name="radio1"
+            class="radiobtn1" />
+          <div
+            class="fullwidth tabdes1"
+            style="text-align: center; padding: 14px">
+            Old Student
+          </div>
+        </label>
+        <label class="flexbox flexdirec-row" style="width: 25%">
+          <input
+            onclick='includehtml(
+              "editenrolleerecordstabid",
+              "app/components/modalcontent/registrar/editenrolleerecords/transferee.html"
+            );'
+            type="radio"
+            name="radio1"
+            class="radiobtn1" />
+          <div
+            class="fullwidth tabdes1"
+            style="text-align: center; padding: 14px">
+            Transferee
+          </div>
+        </label>
+        <label class="flexbox flexdirec-row" style="width: 25%">
+          <input
+            onclick='includehtml(
+              "editenrolleerecordstabid",
+              "app/components/modalcontent/registrar/editenrolleerecords/foreigner.html"
+            );'
+            type="radio"
+            name="radio1"
+            class="radiobtn1" />
+          <div
+            class="fullwidth tabdes1"
+            style="text-align: center; padding: 14px">
+            Foreigner
+          </div>
+        </label>
+      </div>
+      <!-- /////////////////// -->
+
+      <!-- //////////////// this is content tab //////////////// -->
+      <div class="fullwidth flexbox flexdirec-col">
+        <div
+          HTMLINCLUDE="editenrolleerecordstabid"
+          class="fullwidth fullheight"></div>
+      </div>
+      <!-- ///////////////////////////////////////////////////// -->
+    </div>
+  </div>
+</div>
+<script>
+  includehtml(
+    "editenrolleerecordstabid",
+    "app/components/modalcontent/registrar/editenrolleerecords/newstudent.html"
+  );
+</script>

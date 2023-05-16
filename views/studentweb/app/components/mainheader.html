@@ -1,0 +1,33 @@
+<div
+  class="fullwidth fullheight flexbox gridmainmainheader"
+  style="position: relative">
+  <div id="burgermenuid" class="fullheight flexbox burgerbgcontdefault">
+    <ion-icon
+      onclick="toggleburgermenu()"
+      id="burgermenuopen"
+      name="menu-outline"></ion-icon>
+    <ion-icon
+      onclick="toggleburgermenu()"
+      id="burgermenuclose"
+      name="close-outline"></ion-icon>
+  </div>
+  <img src="./img/kse-logo.png" style="width: 55px" />
+  <img
+    src="./img/username-icon-violet.png"
+    style="width: 32px; position: absolute; right: 0; margin-right: 50px" />
+  <ion-icon
+    id="dropdowncaretid"
+    onclick="showdropdownnav()"
+    name="caret-down-outline"
+    style="
+      position: absolute;
+      right: 0;
+      margin-right: 20px;
+      padding: 5px;
+      cursor: pointer;
+    "></ion-icon>
+</div>
+<script>
+  document.getElementById("burgermenuopen").style.display = "block";
+  document.getElementById("burgermenuclose").style.display = "none";
+</script>

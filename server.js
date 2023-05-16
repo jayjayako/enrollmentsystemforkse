@@ -1,28 +1,26 @@
 const express = require("express");
 const app = express();
-require("dotenv").config();
 app.disable("x-powered-by");
+app.set("trust proxy", true);
 
-const path = require("path");
+app.use(express.json());
 
-var routes = require("./routes");
-function getfilespath(req, res, next) {
-  res.locals.absolutepath = __dirname;
-  next();
-}
-app.use("/api", getfilespath, routes);
+const connectDB = require("./modulelibrary/mongodbconn");
+
+connectDB();
+
+const initializesuperadmin = require("./modulelibrary/initsuperadmin");
+
+// setTimeout(initializesuperadmin, 7000);
+
+var sessionMiddleware = require("./modulelibrary/sessionconfig");
+app.use(sessionMiddleware);
 
 var server = require("http").createServer(app);
 
-const port = process.env.PORT || 3000;
+const port = 3000;
 
-const cors = require("cors");
-
-app.use(cors());
-
-const cookieParser = require("cookie-parser");
-app.use(cors({ credentials: true, origin: true }));
-app.use(cookieParser());
+const io = require("socket.io")(server, { cors: { origin: "*" } });
 
 server.listen(port, (err) => {
   if (err) {
@@ -31,10 +29,38 @@ server.listen(port, (err) => {
   console.log(`Listening on port...${port}`);
 });
 
-const io = require("socket.io")(server, { cors: { origin: "*" } });
+///////////// to wrap express session auth inside socket //////////
+const wrap = (middleware) => (socket, next) =>
+  middleware(socket.request, {}, next);
+io.use(wrap(sessionMiddleware));
+///////////////////////////////////////////////////////////////////
 
-var { socketfunct } = require("./realtime/mainsocket");
-socketfunct(io);
+////////////////// use for realtime connection ////////////////////
+var { iofunc } = require("./socketauth/ioinside.js");
+iofunc(io);
+var { socketfunct } = require("./extrasocket/socketinside.js");
+///////////////////////////////////////////////////////////////////
 
-app.use(express.static("ui"));
-app.use("/ui", express.static(__dirname + "ui"));
+/////////////////// socket connection instance /////////////////
+io.on("connection", (socket) => {
+  console.log(`Socket ${socket.id} connected`);
+  socketfunct(socket);
+  app.socket = socket.on("disconnect", () => {
+    console.log(`Socket ${socket.id} disconnected`);
+    socket.disconnect(true);
+  });
+});
+////////////////////////////////////////////////////////////////
+var routes = require("./routes");
+
+function getfilespath(req, res, next) {
+  res.locals.absolutepath = __dirname;
+  next();
+}
+
+app.use("/api", getfilespath, routes);
+
+///////////////// express static views frontend ////////////////
+app.use(express.static("views"));
+app.use("/views", express.static(__dirname + "views"));
+////////////////////////////////////////////////////////////////

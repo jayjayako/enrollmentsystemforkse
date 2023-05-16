@@ -1,0 +1,50 @@
+<div class="fullwidth fullheight flexbox">
+  <img src="./img/kse-logo.png" class="imgsizedes60" />
+</div>
+<div class="fullwidth fullheight flexbox flexdirec-col studentforgotpasspage">
+  <div
+    class="fullwidth flexbox flexdirec-col"
+    style="padding-left: 20%; padding-right: 20%">
+    <div class="fullwidth" style="text-align: left">
+      <button
+        onclick='
+        includehtml("studentloginpageid", "app/pages/studentlogin/loginpage");
+        '
+        class="buttonlink"
+        style="text-decoration: none">
+        &lt; BACK
+      </button>
+    </div>
+    <hr class="fullwidth" />
+    <img src="./img/vercode_vector.png" style="width: 300px; height: 300px" />
+    <h2>Enter the verification Code</h2>
+    <p style="text-align: center">
+      Enter your email address to reset your password. The verification code
+      will be sent to your email.
+    </p>
+    <input class="inputtextdes2" placeholder="Enter the code" type="password" />
+    <div class="fullwidth flexbox flexdirec-row">
+      <button
+        class="fullwidth"
+        style="
+          background-color: transparent;
+          border-radius: 20px;
+          border: 1px solid white;
+          height: 35px;
+          color: white;
+          margin-right: 5px;
+          cursor: pointer;
+        ">
+        RESEND(0)
+      </button>
+      <button
+        onclick='
+        includehtml("studentloginpageid", "app/pages/studentlogin/changepasswordpage");
+        '
+        class="btndes3"
+        style="margin-left: 5px">
+        SEND
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="fullwidth fullheight reportsgrid">
+  <!-- this is tab buttons -->
+  <div
+    class="fullwidth fullheight flexbox flexdirec-row tab1 maingridcont item1">
+    <label class="flexbox flexdirec-row" style="width: 20%">
+      <input
+        onclick='includehtml("reportsid", "app/pages/reports/admins.html");'
+        type="radio"
+        checked="checked"
+        name="radio1"
+        class="radiobtn1" />
+      <div class="fullwidth tabdes1" style="text-align: center; padding: 5px">
+        Admins
+      </div>
+    </label>
+
+    <label class="flexbox flexdirec-row" style="width: 20%">
+      <input
+        onclick='includehtml("reportsid", "app/pages/reports/staffs.html");'
+        type="radio"
+        name="radio1"
+        class="radiobtn1" />
+      <div class="fullwidth tabdes1" style="text-align: center; padding: 5px">
+        Staffs
+      </div>
+    </label>
+    <label class="flexbox flexdirec-row" style="width: 20%">
+      <input
+        onclick='includehtml("reportsid", "app/pages/reports/students.html");'
+        type="radio"
+        name="radio1"
+        class="radiobtn1" />
+      <div class="fullwidth tabdes1" style="text-align: center; padding: 5px">
+        Students
+      </div>
+    </label>
+    <div class="fullwidth"></div>
+  </div>
+  <!-- /////////////////// -->
+
+  <!-- this is content tab -->
+  <div class="fullwidth flexbox flexdirec-col item2">
+    <div HTMLINCLUDE="reportsid" class="fullwidth fullheight"></div>
+  </div>
+</div>
+
+<script>
+  includehtml("reportsid", "app/pages/reports/admins.html");
+</script>

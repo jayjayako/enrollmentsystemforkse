@@ -1,0 +1,29 @@
+@use "../../util";
+@use "../widgets";
+.audittrailgrid {
+  @include widgets.griddesign(1fr, 5.1% auto);
+  .maingridcont {
+    background-color: transparent;
+  }
+  .tabbutton {
+    grid-row: 1;
+    background-color: util.$white;
+    border-bottom: 1px solid util.$blueGreen;
+  }
+  .tabcontent {
+    grid-row: 2;
+  }
+  fieldset {
+    border: 1px solid util.$blueGreen;
+  }
+  legend {
+    background-color: util.$blueGreen;
+    color: util.$white;
+  }
+  img {
+    border: 1px solid util.$violet;
+  }
+  .radiobutton1 {
+    width: 20%;
+  }
+}

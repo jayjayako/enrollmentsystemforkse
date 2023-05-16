@@ -1,0 +1,46 @@
+<div class="fullwidth fullheight flexbox flexdirec-col">
+  <form
+    onsubmit="return false"
+    style="width: 63%; margin-right: 20%; margin-top: -10%">
+    <div class="staffloginmargin fullwidth flexbox">
+      <img src="./img/knowledgeville_nobackground.png" class="imgsizedes60" />
+    </div>
+    <div class="staffloginmargin fullwidth" style="text-align: center">
+      <h3>User Login</h3>
+    </div>
+    <fieldset>
+      <div class="staffloginmargin">
+        <label class="stafflabeldes" for="username">Username</label>
+        <input class="inputtextdes1" type="text" id="staffusernametext" />
+      </div>
+      <div class="staffloginmargin">
+        <label class="stafflabeldes" for="password">Password</label>
+        <input class="inputtextdes1" type="password" id="staffpasswordtext" />
+      </div>
+      <div class="staffloginmargin fullwidth" style="text-align: right">
+        <span
+          class="buttonlink"
+          style="text-decoration: none; font-size: small"
+          onclick='includehtml("staffloginpage", "app/pages/stafflogin/forgotpassword");'>
+          Forgot Password?</span
+        >
+      </div>
+      <div class="staffloginmargin">
+        <button type="submit" onclick="stafflogin()" class="btndes1">
+          LOGIN
+        </button>
+      </div>
+      <div class="staffloginmargin">
+        <button onclick="alert('clear')" class="btndes2">CLEAR</button>
+      </div>
+    </fieldset>
+    <div class="staffloginlinkdes2 fullwidth" style="text-align: center">
+      <span
+        class="buttonlink"
+        style="text-decoration: none; font-size: small"
+        onclick='includehtml("staffandstudentpage", "app/pages/studentlogin");'>
+        Student Login
+      </span>
+    </div>
+  </form>
+</div>

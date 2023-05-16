@@ -1,0 +1,41 @@
+<div class="fullwidth fullheight flexbox">
+  <div class="modalmsgsandnotif_payment modal-content">
+    <div class="modal-header">
+      <span
+        class="close"
+        onclick="
+                  closemodal('1ststackmodalid')
+                  "
+        >&times;</span
+      >
+      <h3>Balance Payment</h3>
+    </div>
+    <div class="modal-body fullwidth fullheight">
+      <h4>Amount Sent</h4>
+      <input type="text" class="inputtextdes3" />
+      <h4 style="margin-bottom: 10px">Upload Payment Receipt</h4>
+      <div class="fullwidth flexbox">
+        <div
+          class="flexbox flexdirec-col"
+          style="
+            width: 70px;
+            height: 70px;
+            background-color: rgb(221, 221, 221);
+            border-radius: 10px;
+          ">
+          <ion-icon name="duplicate-outline"></ion-icon>
+          Add File
+        </div>
+      </div>
+
+      <div class="fullwidth flexbox">
+        <button
+          onclick="openmodal('1ststackmodalid','app/components/modalcontent/msgsandnotif/balance/successfullpayment.html')"
+          class="btndes4"
+          style="width: 30%">
+          SUBMIT
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

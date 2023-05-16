@@ -1,0 +1,47 @@
+<div class="fullwidth fullheight flexbox enrollmentreservationgrid">
+  <div class="modalenrollmentreservation modal-content">
+    <div class="modal-header">
+      <span
+        class="close"
+        onclick="
+      closemodal('1ststackmodalid')
+      "
+        >&times;</span
+      >
+      <h3>Enrollment Reservation</h3>
+    </div>
+    <div class="modal-body fullwidth">
+      <fieldset class="fullwidth fullheight">
+        <legend>USER INFORMATION</legend>
+
+        <div style="padding: 10px">
+          <img src="./img/defaultimg.png" />
+        </div>
+      </fieldset>
+      <div
+        HTMLINCLUDE="enrollmentreservationtable"
+        class="fullwidth fullheight"
+        style="padding-top: 10px; height: 195px"></div>
+      <div class="fullwidth fullheight flexbox flexdirec-row">
+        <div class="fullwidth" style="padding: 10px">
+          <button class="btndes4">VIEW MESSAGE</button>
+        </div>
+        <div class="fullwidth" style="padding: 10px">
+          <button class="btndes4">APPROVE</button>
+        </div>
+        <div class="fullwidth" style="padding: 10px">
+          <button class="btndes4">SEND MESSAGE</button>
+        </div>
+        <div class="fullwidth" style="padding: 10px">
+          <button class="btndes4">DELETE MESSAGE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  includehtml(
+    "enrollmentreservationtable",
+    "app/components/modalcontent/registrar/enrollmentreservation/table.html"
+  );
+</script>

@@ -1,0 +1,73 @@
+<div class="fullwidth fullheight manageuseraccessgrid">
+  <div class="fullwidth fullheight flexbox flexdirec-row maingridcont item1">
+    <div class="fullwidth flexbox">
+      <h3>Select User Type</h3>
+    </div>
+    <div class="fullwidth flexbox">
+      <select class="dropdowndes1" style="width: 45%"></select>
+    </div>
+  </div>
+  <div
+    class="fullwidth fullheight flexbox flexdirec-col maingridcont item2"
+    style="padding: 5px">
+    <fieldset
+      class="fullwidth fullheight flexbox flexdirec-row"
+      style="border-radius: 10px">
+      <legend style="border-radius: 10px; padding: 5px; margin-left: 10px">
+        USER INFORMATION
+      </legend>
+      <div class="fullwidth flexbox flexdirec-col">
+        <p class="fullwidth" style="text-align: left; padding: 3px">
+          ID Number:
+        </p>
+        <p class="fullwidth" style="text-align: left; padding: 3px">
+          Staff Position:
+        </p>
+        <p class="fullwidth" style="text-align: left; padding: 3px">
+          Firstname:
+        </p>
+        <p class="fullwidth" style="text-align: left; padding: 3px">
+          Lastname:
+        </p>
+        <p class="fullwidth" style="text-align: left; padding: 3px">
+          School Level:
+        </p>
+        <p class="fullwidth" style="text-align: left; padding: 3px">
+          Year Level:
+        </p>
+        <p class="fullwidth" style="text-align: left; padding: 3px">Section:</p>
+        <p class="fullwidth" style="text-align: left; padding: 3px">
+          Curriculum Status:
+        </p>
+      </div>
+      <div class="fullwidth"></div>
+      <div class="fullwidth">
+        <img
+          class="fullwidth"
+          src="./img/defaultimg.png"
+          style="border-radius: 10px; height: 170px; width: 170px" />
+      </div>
+    </fieldset>
+    <div class="fullwidth fullheight flexdirec-row" style="height: 20%">
+      <div
+        class="fullwidth"
+        style="text-align: left; width: 30%; padding-top: 5px">
+        <button
+          onclick="
+        openmodal('1ststackmodalid','app/components/modalcontent/addstaff/editmoduleaccess.html')
+      "
+          class="btndes4">
+          EDIT MODULE
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    HTMLINCLUDE="manageuseraccesstable"
+    class="fullwidth fullheight maingridcont item3"
+    style="padding: 5px; height: 220px"></div>
+</div>
+
+<script>
+  includehtml("manageuseraccesstable", "app/pages/manageuseraccess/table.html");
+</script>

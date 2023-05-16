@@ -1,0 +1,27 @@
+@use "../widgets";
+@use "../../util";
+.gridaboutuspage {
+  @extend .fullwidth;
+  @extend .fullheight;
+  @extend .flexbox;
+  img {
+    height: 40%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+  }
+  .content1 {
+    background-color: util.$white;
+    border-radius: 10px;
+    width: 85%;
+    height: 45%;
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.1);
+    h3 {
+      text-align: center;
+      padding: 3px;
+    }
+    p {
+      text-align: center;
+      padding: 10px;
+    }
+  }
+}

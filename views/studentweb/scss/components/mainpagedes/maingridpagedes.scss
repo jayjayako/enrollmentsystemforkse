@@ -1,0 +1,46 @@
+@use "../../util";
+@use "../widgets";
+
+.gridmainpage {
+  @include widgets.griddesign(6% auto, 7.2% auto);
+  .maingridcont {
+    background-color: transparent;
+  }
+
+  .leftnavbargrid {
+    grid-column: 1;
+    grid-row: 2;
+    border-top-right-radius: 10px;
+    transition: 0.5s;
+    z-index: 2;
+    position: fixed;
+    margin-top: 46px;
+    width: 70px;
+  }
+  .drawermenuactive {
+    width: 23.5%;
+  }
+  .mainheadergrid {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+  .mainpagegrid {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: util.$lightBlue;
+  }
+  .mainpageanimate {
+    animation-name: animatedmainpage;
+    animation-duration: 0.4s;
+    transition: 0.5s;
+  }
+  @keyframes animatedmainpage {
+    from {
+      background-color: util.$white;
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
